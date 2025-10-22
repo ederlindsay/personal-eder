@@ -1,17 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
-
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import React from 'react';
+import HeroSection from '@/components/HeroSection';
+import OriginsPurposeSection from '@/components/OriginsPurposeSection';
+import EducationLearningSection from '@/components/EducationLearningSection';
+import FaithResilienceSection from '@/components/FaithResilienceSection';
+import FamilySection from '@/components/FamilySection';
+import PastoralMissionSection from '@/components/PastoralMissionSection';
+import CareerEntrepreneurshipSection from '@/components/CareerEntrepreneurshipSection';
+import RecognitionsAchievementsSection from '@/components/RecognitionsAchievementsSection';
+import ProfessionalExperienceSection from '@/components/ProfessionalExperienceSection';
+import SpeakerMentorSection from '@/components/SpeakerMentorSection';
+import LeadershipValuesSection from '@/components/LeadershipValuesSection';
+import InternationalExperienceSection from '@/components/InternationalExperienceSection';
+import TechnicalSkillsSection from '@/components/TechnicalSkillsSection';
+import RelationalCharacteristicsSection from '@/components/RelationalCharacteristicsSection';
+import PersonalPhilosophySection from '@/components/PersonalPhilosophySection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
-      </div>
-      <MadeWithDyad />
+    <div className="bg-background text-foreground">
+      <HeroSection />
+      <OriginsPurposeSection />
+      <EducationLearningSection />
+      <FaithResilienceSection />
+      <FamilySection />
+      <PastoralMissionSection />
+      <CareerEntrepreneurshipSection />
+      <RecognitionsAchievementsSection />
+      <ProfessionalExperienceSection />
+      <SpeakerMentorSection />
+      <LeadershipValuesSection />
+      <InternationalExperienceSection />
+      <TechnicalSkillsSection />
+      <RelationalCharacteristicsSection />
+      <PersonalPhilosophySection />
     </div>
   );
 };
