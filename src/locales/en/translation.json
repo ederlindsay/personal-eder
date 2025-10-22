@@ -7,6 +7,11 @@
     "experience": "Experience",
     "contact": "Contact"
   },
+  "common": {
+    "learn_more": "Learn More",
+    "click_for_details": "Click for details",
+    "map_note": "Note: The interactive map feature with clickable photos is a complex feature and is currently represented by a placeholder. This would involve integrating a mapping library and managing image galleries per location."
+  },
   "hero": {
     "title": "Who is Eder Balbino",
     "subtitle": "Courage to face the new. I'm third."

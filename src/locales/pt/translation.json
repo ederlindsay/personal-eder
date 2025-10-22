@@ -7,6 +7,11 @@
     "experience": "Experiência",
     "contact": "Contato"
   },
+  "common": {
+    "learn_more": "Saiba Mais",
+    "click_for_details": "Clique para detalhes",
+    "map_note": "Nota: O recurso de mapa interativo com fotos clicáveis é uma funcionalidade complexa e está atualmente representado por um placeholder. Isso envolveria a integração de uma biblioteca de mapeamento e o gerenciamento de galerias de imagens por local."
+  },
   "hero": {
     "title": "Quem é Éder Balbino",
     "subtitle": "Coragem para encarar o novo. I'm third."
