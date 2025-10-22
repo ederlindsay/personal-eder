@@ -3,12 +3,16 @@ import { useTranslation } from 'react-i18next';
 import DetailDialog from './DetailDialog';
 import { Button } from '@/components/ui/button';
 
-const RecognitionsAchievementsSection = () => {
+interface RecognitionsAchievementsSectionProps {
+  id: string;
+}
+
+const RecognitionsAchievementsSection: React.FC<RecognitionsAchievementsSectionProps> = ({ id }) => {
   const { t } = useTranslation();
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   return (
-    <section className="py-16 md:py-24 bg-background text-foreground border-t border-gray-200 dark:border-gray-800">
+    <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t border-gray-200 dark:border-gray-800">
       <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
           {t('recognitions_achievements.title')}

@@ -18,8 +18,13 @@
   },
   "origins_purpose": {
     "title": "Origins and Purpose",
+    "intro_short": "Discover my humble beginnings and the journey that shaped my purpose.",
     "paragraph1": "I was born in a simple home in Belo Horizonte (MG), the fifth child of Pedro Balbino and Maria José — a couple who taught me the value of faith, integrity, and generosity. My father was a pastor and founder of a Baptist church, and I grew up surrounded by music, friendship, and spirituality. I was a drummer in my youth and had a passion for rock'n roll.",
-    "paragraph2": "Since I was 7 years old, I dreamed of entrepreneurship. I saved coins to one day have my own company — although I spent it all on popsicles from Dona Teófila when friends came to visit. It was the first of many lessons about investment and generosity."
+    "paragraph1_short_title": "Humble Beginnings",
+    "paragraph1_summary": "Born in Belo Horizonte, I learned faith, integrity, and generosity from my parents.",
+    "paragraph2": "Since I was 7 years old, I dreamed of entrepreneurship. I saved coins to one day have my own company — although I spent it all on popsicles from Dona Teófila when friends came to visit. It was the first of many lessons about investment and generosity.",
+    "paragraph2_short_title": "Early Entrepreneurial Dreams",
+    "paragraph2_summary": "My childhood dream of entrepreneurship and early lessons in investment and generosity."
   },
   "education_learning": {
     "title": "Education and Learning",
@@ -36,8 +41,16 @@
   },
   "family": {
     "title": "Family",
-    "paragraph1": "I am married to the wonderful Heloísa Cristina and father of four incredible children: Emily (13), Sofia (10), Ravi (7), and Nicole (3).",
-    "paragraph2": "I am the youngest among my siblings Quesia, Dan, Júnia, and Sara, with whom I maintain a relationship of love and friendship."
+    "close_family": {
+      "title": "Close Family (Wife and Children)",
+      "paragraph1": "I am married to the wonderful Heloísa Cristina and father of four incredible children: Emily (13), Sofia (10), Ravi (7), and Nicole (3).",
+      "summary": "Meet my wife Heloísa Cristina and our four amazing children: Emily, Sofia, Ravi, and Nicole."
+    },
+    "extended_family": {
+      "title": "Extended Family (Parents and Siblings)",
+      "paragraph1": "I am the youngest among my siblings Quesia, Dan, Júnia, and Sara, with whom I maintain a relationship of love and friendship.",
+      "summary": "Learn about my parents, Pedro Balbino and Maria José, and my siblings: Quesia, Dan, Júnia, and Sara."
+    }
   },
   "pastoral_mission": {
     "title": "Pastoral Life and Mission",
@@ -65,7 +78,7 @@
     "item1": "🏆 Winner of InovAtiva Brasil, the largest startup acceleration program of the Federal Government (1st place among over 3,000).",
     "item2": "🌍 Selected by SEBRAE-MG to represent Brazil at GITEX Dubai 2025, the largest technology event in the Middle East.",
     "item3": "💳 Winner of the VISA Acceleration Program, with a one-month immersion in Silicon Valley, visiting Google, Airbnb, Meta, X, and Square.",
-    "item4": "🏅 GPTW (Great Place to Work) Seal with maximum score (100/100) in 2025, leading Gaio with empathy, courage, and excellence."
+    "item4": "🏅 Selo GPTW (Great Place to Work) with maximum score (100/100) in 2025, leading Gaio with empathy, courage, and excellence."
   },
   "professional_experience": {
     "title": "Professional Experience",

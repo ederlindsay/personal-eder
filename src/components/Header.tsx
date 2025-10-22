@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Link } from 'react-router-dom';
+import NavigationMenuComponent from './NavigationMenuComponent'; // Import the new NavigationMenuComponent
 
 const Header = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ const Header = () => {
           {t('header.title')}
         </Link>
         <nav className="flex items-center space-x-4">
-          {/* Navigation links can go here if needed, for now just language switcher */}
+          <NavigationMenuComponent /> {/* Integrate the NavigationMenuComponent */}
           <LanguageSwitcher />
         </nav>
       </div>

@@ -18,21 +18,21 @@ import PersonalPhilosophySection from '@/components/PersonalPhilosophySection';
 const Index = () => {
   return (
     <div className="bg-background text-foreground">
-      <HeroSection />
-      <OriginsPurposeSection />
-      <EducationLearningSection />
-      <FaithResilienceSection />
-      <FamilySection />
-      <PastoralMissionSection />
-      <CareerEntrepreneurshipSection />
-      <RecognitionsAchievementsSection />
-      <ProfessionalExperienceSection />
-      <SpeakerMentorSection />
-      <LeadershipValuesSection />
-      <InternationalExperienceSection />
-      <TechnicalSkillsSection />
-      <RelationalCharacteristicsSection />
-      <PersonalPhilosophySection />
+      <HeroSection id="hero" />
+      <OriginsPurposeSection id="origins-purpose" />
+      <EducationLearningSection id="education-learning" />
+      <FaithResilienceSection id="faith-resilience" />
+      <FamilySection id="family" />
+      <PastoralMissionSection id="pastoral-mission" />
+      <CareerEntrepreneurshipSection id="career-entrepreneurship" />
+      <RecognitionsAchievementsSection id="recognitions-achievements" />
+      <ProfessionalExperienceSection id="professional-experience" />
+      <SpeakerMentorSection id="speaker-mentor" />
+      <LeadershipValuesSection id="leadership-values" />
+      <InternationalExperienceSection id="international-experience" />
+      <TechnicalSkillsSection id="technical-skills" />
+      <RelationalCharacteristicsSection id="relational-characteristics" />
+      <PersonalPhilosophySection id="personal-philosophy" />
     </div>
   );
 };

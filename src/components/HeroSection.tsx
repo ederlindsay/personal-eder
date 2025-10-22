@@ -3,12 +3,16 @@ import { useTranslation } from 'react-i18next';
 import DetailDialog from './DetailDialog';
 import { Button } from '@/components/ui/button';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  id: string;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
   const { t } = useTranslation();
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   return (
-    <section className="py-20 md:py-32 text-center bg-background text-foreground">
+    <section id={id} className="py-20 md:py-32 text-center bg-background text-foreground">
       <div className="container max-w-4xl mx-auto px-4">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
           {t('hero.title')}

@@ -18,8 +18,13 @@
   },
   "origins_purpose": {
     "title": "Origens e Propósito",
+    "intro_short": "Descubra minhas origens humildes e a jornada que moldou meu propósito.",
     "paragraph1": "Nasci em um lar simples em Belo Horizonte (MG), o quinto filho de Pedro Balbino e Maria José — um casal que me ensinou o valor da fé, da integridade e da generosidade. Meu pai foi pastor e fundador de uma igreja Batista, e cresci cercado de música, amizade e espiritualidade. Fui baterista na juventude e tinha paixão por rock’n roll.",
-    "paragraph2": "Desde os 7 anos de idade, sonhava em empreender. Juntava moedas para um dia ter minha própria empresa — embora tenha gasto tudo com picolés da Dona Teófila quando amigos vieram me visitar. Foi a primeira de muitas lições sobre investimento e generosidade."
+    "paragraph1_short_title": "Origens Humildes",
+    "paragraph1_summary": "Nascido em Belo Horizonte, aprendi fé, integridade e generosidade com meus pais.",
+    "paragraph2": "Desde os 7 anos de idade, sonhava em empreender. Juntava moedas para um dia ter minha própria empresa — embora tenha gasto tudo com picolés da Dona Teófila quando amigos vieram me visitar. Foi a primeira de muitas lições sobre investimento e generosidade.",
+    "paragraph2_short_title": "Sonhos Empreendedores na Infância",
+    "paragraph2_summary": "Meu sonho de infância de empreender e as primeiras lições sobre investimento e generosidade."
   },
   "education_learning": {
     "title": "Formação e Aprendizado",
@@ -36,8 +41,16 @@
   },
   "family": {
     "title": "Família",
-    "paragraph1": "Sou casado com a maravilhosa Heloísa Cristina e pai de quatro crianças incríveis: Emily (13), Sofia (10), Ravi (7) e Nicole (3).",
-    "paragraph2": "Sou o caçula entre meus irmãos Quesia, Dan, Júnia e Sara, com quem mantenho um relacionamento de amor e amizade."
+    "close_family": {
+      "title": "Família Próxima (Esposa e Filhos)",
+      "paragraph1": "Sou casado com a maravilhosa Heloísa Cristina e pai de quatro crianças incríveis: Emily (13), Sofia (10), Ravi (7) e Nicole (3).",
+      "summary": "Conheça minha esposa Heloísa Cristina e nossos quatro filhos incríveis: Emily, Sofia, Ravi e Nicole."
+    },
+    "extended_family": {
+      "title": "Família Estendida (Pais e Irmãos)",
+      "paragraph1": "Sou o caçula entre meus irmãos Quesia, Dan, Júnia e Sara, com quem mantenho um relacionamento de amor e amizade.",
+      "summary": "Saiba mais sobre meus pais, Pedro Balbino e Maria José, e meus irmãos: Quesia, Dan, Júnia e Sara."
+    }
   },
   "pastoral_mission": {
     "title": "Vida Pastoral e Missão",
