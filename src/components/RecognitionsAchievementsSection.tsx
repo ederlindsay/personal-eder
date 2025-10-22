@@ -9,7 +9,7 @@ const RecognitionsAchievementsSection: React.FC<RecognitionsAchievementsSectionP
   const { t } = useTranslation();
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
+    <section id={id} className="py-16 md:py-24 bg-muted text-foreground border-t">
       <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('recognitions_achievements.title')}

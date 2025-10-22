@@ -15,7 +15,7 @@ const EducationLearningSection: React.FC<EducationLearningSectionProps> = ({ id 
       value: 'academic',
       label: t('education_learning.academic.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-academic">
+        <AccordionContentItem imageSeed="eder-academic" imagePosition="left">
           <p>{t('education_learning.academic.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const EducationLearningSection: React.FC<EducationLearningSectionProps> = ({ id 
       value: 'theology',
       label: t('education_learning.theology.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-theology">
+        <AccordionContentItem imageSeed="eder-theology" imagePosition="right">
           <p>{t('education_learning.theology.content')}</p>
         </AccordionContentItem>
       ),
@@ -33,7 +33,7 @@ const EducationLearningSection: React.FC<EducationLearningSectionProps> = ({ id 
       value: 'english',
       label: t('education_learning.english.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-english">
+        <AccordionContentItem imageSeed="eder-english" imagePosition="left">
           <p>{t('education_learning.english.content')}</p>
         </AccordionContentItem>
       ),

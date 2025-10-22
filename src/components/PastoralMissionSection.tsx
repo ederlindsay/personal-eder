@@ -15,7 +15,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
       value: 'pastor',
       label: t('pastoral_mission.pastor.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-pastor">
+        <AccordionContentItem imageSeed="eder-pastor" imagePosition="left">
           <p>{t('pastoral_mission.pastor.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
       value: 'book',
       label: t('pastoral_mission.book.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-book">
+        <AccordionContentItem imageSeed="eder-book" imagePosition="right">
           <p>{t('pastoral_mission.book.content')}</p>
         </AccordionContentItem>
       ),
@@ -33,7 +33,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
       value: 'social_projects',
       label: t('pastoral_mission.social_projects.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-social">
+        <AccordionContentItem imageSeed="eder-social" imagePosition="left">
           <p>{t('pastoral_mission.social_projects.content')}</p>
         </AccordionContentItem>
       ),
@@ -41,7 +41,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
   ];
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
+    <section id={id} className="py-16 md:py-24 bg-muted text-foreground border-t">
       <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('pastoral_mission.title')}

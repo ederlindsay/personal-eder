@@ -15,7 +15,7 @@ const FaithResilienceSection: React.FC<FaithResilienceSectionProps> = ({ id }) =
       value: 'mission',
       label: t('faith_resilience.mission.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-mission">
+        <AccordionContentItem imageSeed="eder-mission" imagePosition="left">
           <p>{t('faith_resilience.mission.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const FaithResilienceSection: React.FC<FaithResilienceSectionProps> = ({ id }) =
       value: 'chaos',
       label: t('faith_resilience.chaos.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-chaos">
+        <AccordionContentItem imageSeed="eder-chaos" imagePosition="right">
           <p>{t('faith_resilience.chaos.content_p1')}</p>
           <p>{t('faith_resilience.chaos.content_p2')}</p>
           <p>{t('faith_resilience.chaos.content_p3')}</p>
@@ -34,7 +34,7 @@ const FaithResilienceSection: React.FC<FaithResilienceSectionProps> = ({ id }) =
   ];
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
+    <section id={id} className="py-16 md:py-24 bg-muted text-foreground border-t">
       <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('faith_resilience.title')}

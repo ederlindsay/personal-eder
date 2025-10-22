@@ -15,7 +15,7 @@ const CareerEntrepreneurshipSection: React.FC<CareerEntrepreneurshipSectionProps
       value: 'companies',
       label: t('career_entrepreneurship.companies.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-companies">
+        <AccordionContentItem imageSeed="eder-companies" imagePosition="left">
           <p>{t('career_entrepreneurship.companies.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const CareerEntrepreneurshipSection: React.FC<CareerEntrepreneurshipSectionProps
       value: 'current_roles',
       label: t('career_entrepreneurship.current_roles.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-roles">
+        <AccordionContentItem imageSeed="eder-roles" imagePosition="right">
           <p>{t('career_entrepreneurship.current_roles.content')}</p>
         </AccordionContentItem>
       ),

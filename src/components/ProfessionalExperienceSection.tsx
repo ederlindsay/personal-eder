@@ -15,7 +15,7 @@ const ProfessionalExperienceSection: React.FC<ProfessionalExperienceSectionProps
       value: 'consulting',
       label: t('professional_experience.consulting.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-consulting">
+        <AccordionContentItem imageSeed="eder-consulting" imagePosition="left">
           <p>{t('professional_experience.consulting.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const ProfessionalExperienceSection: React.FC<ProfessionalExperienceSectionProps
       value: 'teaching',
       label: t('professional_experience.teaching.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-teaching">
+        <AccordionContentItem imageSeed="eder-teaching" imagePosition="right">
           <p>{t('professional_experience.teaching.content')}</p>
         </AccordionContentItem>
       ),

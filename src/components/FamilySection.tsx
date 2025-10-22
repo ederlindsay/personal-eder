@@ -15,7 +15,7 @@ const FamilySection: React.FC<FamilySectionProps> = ({ id }) => {
       value: 'close_family',
       label: t('family.close_family.title'),
       content: (
-        <AccordionContentItem imageSeed="familia-proxima"> {/* Mantido com imageSeed, pois 'familia-proxima.jpg' não foi encontrado */}
+        <AccordionContentItem imageSeed="familia-proxima" imagePosition="left">
           <p>{t('family.close_family.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const FamilySection: React.FC<FamilySectionProps> = ({ id }) => {
       value: 'extended_family',
       label: t('family.extended_family.title'),
       content: (
-        <AccordionContentItem imageSrc="/images/familia-extendida.jpeg"> {/* Usando o arquivo específico */}
+        <AccordionContentItem imageSrc="/images/familia-extendida.jpeg" imagePosition="right">
           <p>{t('family.extended_family.content')}</p>
         </AccordionContentItem>
       ),
