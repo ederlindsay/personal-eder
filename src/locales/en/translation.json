@@ -30,6 +30,7 @@
   },
   "family": {
     "title": "Family",
+    "intro_short": "Meet the most important people in my life: my wife, children, parents, and siblings.",
     "close_family": {
       "title": "Close Family (Wife and Children)",
       "summary": "Meet my wife Heloísa Cristina and our four amazing children.",
@@ -43,6 +44,7 @@
   },
   "faith_resilience": {
     "title": "Faith and Resilience",
+    "intro_short": "My journey of faith, pastoral mission, and how resilience helped me overcome challenges.",
     "mission": {
       "title": "Mission",
       "content": "I am a man of reformed faith and a missions pastor at Igreja Missão VIDE (Integral Vision of the Gospel), where I lead teams that support 20 missionary families in countries such as Mozambique, Angola, Tunisia, Spain, France, and Brazil."
@@ -56,6 +58,7 @@
   },
   "education_learning": {
     "title": "Education and Learning",
+    "intro_short": "My academic and theological journey, and the personal challenge that led me to master English.",
     "academic": {
       "title": "Academic Background",
       "content": "I hold a degree in Statistics and a postgraduate degree in Strategic Information Management from UFMG, one of Brazil's three most renowned universities."
@@ -71,6 +74,7 @@
   },
   "pastoral_mission": {
     "title": "Pastoral Life and Mission",
+    "intro_short": "My role as a pastor, writer, mentor, and involvement in social projects in Africa.",
     "pastor": {
       "title": "Pastor, Writer, and Mentor",
       "content": "As a pastor, writer, and mentor, I seek to inspire people to fully trust in God."
@@ -86,6 +90,7 @@
   },
   "career_entrepreneurship": {
     "title": "Career and Entrepreneurship",
+    "intro_short": "My entrepreneurial journey of over 25 years and my current roles in technology companies.",
     "companies": {
       "title": "Founded Companies",
       "content": "I have been an entrepreneur for over 25 years, having founded companies such as Loja Rentável, i-Varejo, Lince (sold to Grupo Algar in 2014), AioNow, Beelong, and Gaio DataOS."
@@ -97,10 +102,12 @@
   },
   "recognitions_achievements": {
     "title": "Recognitions and Achievements",
+    "intro_short": "Highlights and awards that marked my professional and entrepreneurial journey.",
     "content": "Winner of InovAtiva Brasil, selected for GITEX Dubai 2025, winner of the VISA Acceleration Program with an immersion in Silicon Valley, and a GPTW seal with a maximum score."
   },
   "professional_experience": {
     "title": "Professional Experience",
+    "intro_short": "My involvement in data intelligence projects and as a professor at renowned institutions.",
     "consulting": {
       "title": "Consulting and Projects",
       "content": "I have worked on data intelligence projects in institutions such as TCU, TCE-CE, State Treasury Departments, Ministry of Planning, BNB, Embraer, Oi, Algar Telecom, and Martins Atacadista."
@@ -112,26 +119,32 @@
   },
   "speaker_mentor": {
     "title": "Speaker and Mentor",
+    "intro_short": "My experience as a speaker at international events and mentor for entrepreneurs and young professionals.",
     "content": "A speaker at international Gartner and Informa events, I share insights on faith, technology, and purpose. I mentor entrepreneurs and young professionals."
   },
   "leadership_values": {
     "title": "Leadership and Values",
+    "intro_short": "My leadership philosophy, based on example, love, and excellence.",
     "content": "I lead by example. I believe that loving is not always pleasing—it is helping people become better. I do everything with excellence, as if for God."
   },
   "international_experience": {
     "title": "International Experience",
+    "intro_short": "My experiences and learning in various countries and cities around the world.",
     "content": "I have worked and learned in various countries and cities worldwide, including the USA (Silicon Valley, Miami, NY), Europe (Paris, London, Milan), Latin America, and the Middle East (Dubai)."
   },
   "technical_skills": {
     "title": "Technical Skills",
+    "intro_short": "My main skills and tools in data intelligence, AI, and development.",
     "skills": "Gaio DataOS, SAS, RapidMiner, KNIME, IBM Analytics, Watson, Tableau, QlikView, Python, SQL, Oracle, MySQL, SQL Server, Teradata, MemSQL, Docker, Linux, Windows, macOS, CRM Tools, MS Office, PHP"
   },
   "relational_characteristics": {
     "title": "Relational Characteristics",
+    "intro_short": "The traits that define my way of interacting and building relationships.",
     "characteristics": "Innovative, Generous, Self-control, Pleasure in teaching, Patience, Intensity, Love"
   },
   "personal_philosophy": {
     "title": "Personal Philosophy",
+    "intro_short": "My core belief about inner peace, conviction, and unwavering faith.",
     "quote": "“There is inner peace even amidst outer war.”",
     "explanation": "I live with serenity in chaos, conviction in uncertainty, and unwavering faith in God's purpose."
   }

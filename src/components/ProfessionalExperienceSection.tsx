@@ -13,9 +13,12 @@ const ProfessionalExperienceSection: React.FC<ProfessionalExperienceSectionProps
   return (
     <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
       <div className="container max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('professional_experience.title')}
         </h2>
+        <p className="text-lg text-muted-foreground mb-8 text-center">
+          {t('professional_experience.intro_short')}
+        </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-xl">{t('professional_experience.consulting.title')}</AccordionTrigger>

@@ -60,13 +60,13 @@ const NavigationMenuComponent = () => {
                 {t('origins_purpose.intro_short')}
               </ListItem>
               <ListItem href="#family" title={t('family.title')}>
-                {t('family.close_family.summary')}
+                {t('family.intro_short')}
               </ListItem>
               <ListItem href="#faith-resilience" title={t('faith_resilience.title')}>
-                {t('faith_resilience.mission.content').substring(0, 100)}...
+                {t('faith_resilience.intro_short')}
               </ListItem>
                <ListItem href="#education-learning" title={t('education_learning.title')}>
-                {t('education_learning.academic.content').substring(0, 100)}...
+                {t('education_learning.intro_short')}
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -77,13 +77,13 @@ const NavigationMenuComponent = () => {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               <ListItem href="#career-entrepreneurship" title={t('career_entrepreneurship.title')}>
-                {t('career_entrepreneurship.companies.content').substring(0, 100)}...
+                {t('career_entrepreneurship.intro_short')}
               </ListItem>
               <ListItem href="#professional-experience" title={t('professional_experience.title')}>
-                 {t('professional_experience.consulting.content').substring(0, 100)}...
+                 {t('professional_experience.intro_short')}
               </ListItem>
               <ListItem href="#recognitions-achievements" title={t('recognitions_achievements.title')}>
-                 {t('recognitions_achievements.content').substring(0, 100)}...
+                 {t('recognitions_achievements.intro_short')}
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -94,13 +94,13 @@ const NavigationMenuComponent = () => {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               <ListItem href="#leadership-values" title={t('leadership_values.title')}>
-                {t('leadership_values.content').substring(0, 100)}...
+                {t('leadership_values.intro_short')}
               </ListItem>
               <ListItem href="#speaker-mentor" title={t('speaker_mentor.title')}>
-                {t('speaker_mentor.content').substring(0, 100)}...
+                {t('speaker_mentor.intro_short')}
               </ListItem>
               <ListItem href="#international-experience" title={t('international_experience.title')}>
-                {t('international_experience.content').substring(0, 100)}...
+                {t('international_experience.intro_short')}
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -111,13 +111,13 @@ const NavigationMenuComponent = () => {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               <ListItem href="#technical-skills" title={t('technical_skills.title')}>
-                {t('technical_skills.skills').substring(0, 100)}...
+                {t('technical_skills.intro_short')}
               </ListItem>
               <ListItem href="#relational-characteristics" title={t('relational_characteristics.title')}>
-                {t('relational_characteristics.characteristics').substring(0, 100)}...
+                {t('relational_characteristics.intro_short')}
               </ListItem>
               <ListItem href="#personal-philosophy" title={t('personal_philosophy.title')}>
-                {t('personal_philosophy.explanation')}
+                {t('personal_philosophy.intro_short')}
               </ListItem>
             </ul>
           </NavigationMenuContent>

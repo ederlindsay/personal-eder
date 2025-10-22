@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "Éder Balbino",
+    "title": "Eder Balbino",
     "home": "Início",
     "biography": "Biografia",
     "career": "Carreira",
@@ -11,7 +11,7 @@
     "learn_more": "Saiba Mais"
   },
   "hero": {
-    "title": "Quem é Éder Balbino",
+    "title": "Quem é Eder Balbino",
     "subtitle": "Coragem para encarar o novo. I'm third."
   },
   "origins_purpose": {
@@ -30,6 +30,7 @@
   },
   "family": {
     "title": "Família",
+    "intro_short": "Conheça as pessoas mais importantes da minha vida: minha esposa, filhos, pais e irmãos.",
     "close_family": {
       "title": "Família Próxima (Esposa e Filhos)",
       "summary": "Conheça minha esposa Heloísa Cristina e nossos quatro filhos incríveis.",
@@ -43,6 +44,7 @@
   },
   "faith_resilience": {
     "title": "Fé e Resiliência",
+    "intro_short": "Minha jornada de fé, missão pastoral e como a resiliência me ajudou a superar desafios.",
     "mission": {
       "title": "Missão",
       "content": "Sou um homem de fé reformada e pastor de missões na Igreja Missão VIDE (Visão Integral do Evangelho), onde lidero equipes que apoiam 20 famílias missionárias em países como Moçambique, Angola, Tunísia, Espanha, França e Brasil."
@@ -56,6 +58,7 @@
   },
   "education_learning": {
     "title": "Formação e Aprendizado",
+    "intro_short": "Minha trajetória acadêmica, teológica e o desafio pessoal que me levou a dominar o inglês.",
     "academic": {
       "title": "Formação Acadêmica",
       "content": "Sou graduado em Estatística e pós-graduado em Gestão Estratégica da Informação pela UFMG, uma das três mais renomadas universidades do Brasil."
@@ -71,6 +74,7 @@
   },
   "pastoral_mission": {
     "title": "Vida Pastoral e Missão",
+    "intro_short": "Minha atuação como pastor, escritor, mentor e o envolvimento em projetos sociais na África.",
     "pastor": {
       "title": "Pastor, Escritor e Mentor",
       "content": "Como pastor, escritor e mentor, busco inspirar pessoas a confiarem plenamente em Deus."
@@ -86,6 +90,7 @@
   },
   "career_entrepreneurship": {
     "title": "Carreira e Empreendedorismo",
+    "intro_short": "Minha jornada empreendedora de mais de 25 anos e minhas atuações atuais em empresas de tecnologia.",
     "companies": {
       "title": "Empresas Fundadas",
       "content": "Sou empreendedor há mais de 25 anos, tendo fundado empresas como Loja Rentável, i-Varejo, Lince (vendida ao Grupo Algar em 2014), AioNow, Beelong e Gaio DataOS."
@@ -97,10 +102,12 @@
   },
   "recognitions_achievements": {
     "title": "Reconhecimentos e Conquistas",
+    "intro_short": "Destaques e prêmios que marcaram minha trajetória profissional e empreendedora.",
     "content": "Vencedor do InovAtiva Brasil, selecionado para a GITEX Dubai 2025, vencedor do Programa de Aceleração da VISA com imersão no Vale do Silício, e selo GPTW com pontuação máxima."
   },
   "professional_experience": {
     "title": "Experiência Profissional",
+    "intro_short": "Minha atuação em projetos de inteligência de dados e como professor em renomadas instituições.",
     "consulting": {
       "title": "Consultoria e Projetos",
       "content": "Atuei em projetos de inteligência de dados em instituições como TCU, TCE-CE, Secretarias de Fazenda, Ministério do Planejamento, BNB, Embraer, Oi, Algar Telecom e Martins Atacadista."
@@ -112,26 +119,32 @@
   },
   "speaker_mentor": {
     "title": "Palestrante e Mentor",
+    "intro_short": "Minha experiência como palestrante em eventos internacionais e mentor de empreendedores e jovens.",
     "content": "Palestrante em eventos internacionais da Gartner e Informa, compartilho sobre fé, tecnologia e propósito. Sou mentor de empreendedores e jovens em início de carreira."
   },
   "leadership_values": {
     "title": "Liderança e Valores",
+    "intro_short": "Minha filosofia de liderança, baseada em exemplo, amor e excelência.",
     "content": "Lidero pelo exemplo. Acredito que amar não é agradar sempre — é ajudar as pessoas a se tornarem melhores. Faço tudo com excelência, como que para Deus."
   },
   "international_experience": {
     "title": "Experiência Internacional",
+    "intro_short": "Minha vivência e aprendizado em diversos países e cidades ao redor do mundo.",
     "content": "Atuei e aprendi em diversos países e cidades ao redor do mundo, incluindo EUA (Vale do Silício, Miami, NY), Europa (Paris, Londres, Milão), América Latina e Oriente Médio (Dubai)."
   },
   "technical_skills": {
     "title": "Competências Técnicas",
+    "intro_short": "Minhas principais habilidades e ferramentas em inteligência de dados, IA e desenvolvimento.",
     "skills": "Gaio DataOS, SAS, RapidMiner, KNIME, IBM Analytics, Watson, Tableau, QlikView, Python, SQL, Oracle, MySQL, SQL Server, Teradata, MemSQL, Docker, Linux, Windows, macOS, CRM Tools, MS Office, PHP"
   },
   "relational_characteristics": {
     "title": "Características Relacionais",
+    "intro_short": "Os traços que definem minha forma de interagir e construir relacionamentos.",
     "characteristics": "Inovador, Generoso, Domínio próprio, Prazer em ensinar, Paciência, Intensidade, Amor"
   },
   "personal_philosophy": {
     "title": "Filosofia Pessoal",
+    "intro_short": "Minha crença central sobre paz interior, convicção e fé inabalável.",
     "quote": "“Há paz interior mesmo em meio à guerra exterior.”",
     "explanation": "Vivo com serenidade no caos, convicção na incerteza e fé inabalável no propósito de Deus."
   }

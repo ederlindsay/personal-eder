@@ -1,7 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-// Removed DetailDialog import
-// Removed Button import as it's no longer used for a dialog trigger
 
 interface LeadershipValuesSectionProps {
   id: string;
@@ -13,9 +11,12 @@ const LeadershipValuesSection: React.FC<LeadershipValuesSectionProps> = ({ id })
   return (
     <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
       <div className="container max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('leadership_values.title')}
         </h2>
+        <p className="text-lg text-muted-foreground mb-8 text-center">
+          {t('leadership_values.intro_short')}
+        </p>
         <div className="grid md:grid-cols-2 gap-8 items-center">
            <div className="relative w-full h-64 rounded-lg overflow-hidden">
             <img
@@ -23,10 +24,8 @@ const LeadershipValuesSection: React.FC<LeadershipValuesSectionProps> = ({ id })
               alt={t('leadership_values.title')}
               className="w-full h-full object-cover"
             />
-            {/* Removed the click overlay as there's no dialog */}
           </div>
           <p className="text-lg text-muted-foreground">{t('leadership_values.content')}</p>
-          {/* Removed Button as it was for dialog */}
         </div>
       </div>
     </section>
