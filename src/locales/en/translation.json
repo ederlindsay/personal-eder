@@ -1,0 +1,119 @@
+{
+  "header": {
+    "title": "Eder Balbino",
+    "home": "Home",
+    "about": "About",
+    "career": "Career",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Who is Eder Balbino",
+    "subtitle": "Courage to face the new. I'm third."
+  },
+  "origins_purpose": {
+    "title": "Origins and Purpose",
+    "paragraph1": "I was born in a simple home in Belo Horizonte (MG), the fifth child of Pedro Balbino and Maria José — a couple who taught me the value of faith, integrity, and generosity. My father was a pastor and founder of a Baptist church, and I grew up surrounded by music, friendship, and spirituality. I was a drummer in my youth and had a passion for rock'n roll.",
+    "paragraph2": "Since I was 7 years old, I dreamed of entrepreneurship. I saved coins to one day have my own company — although I spent it all on popsicles from Dona Teófila when friends came to visit. It was the first of many lessons about investment and generosity."
+  },
+  "education_learning": {
+    "title": "Education and Learning",
+    "paragraph1": "I hold a degree in Statistics and a postgraduate degree in Strategic Information Management from UFMG, one of Brazil's three most renowned universities.",
+    "paragraph2": "I also have a degree in Theology from the Society of Interdisciplinary Biblical Studies (SEBI) in Brasília.",
+    "paragraph3": "My English was born from a personal challenge: I studied 12 hours a day for three months and completed the entire English Live (formerly English Town) course. The effort paid off: I ranked 1st worldwide, with double the points of the second-place finisher."
+  },
+  "faith_resilience": {
+    "title": "Faith and Resilience",
+    "paragraph1": "I am a man of reformed faith and a missions pastor at Igreja Missão VIDE (Integral Vision of the Gospel), where I lead teams that support 20 missionary families in countries such as Mozambique, Angola, Tunisia, Spain, France, and Brazil.",
+    "paragraph2": "I believe in God's sovereignty and transformation through suffering. In 2023, I faced one of the greatest trials of my life when I was targeted by a Federal Police operation authorized by Minister Alexandre de Moraes. I was investigated for a political plot involving then-president Jair Bolsonaro, after my system identified flaws in electronic voting machines.",
+    "paragraph3": "After 10 months of investigation, the Federal Police concluded that I had told the truth and done everything correctly. The case gained national and international repercussion, and I was called 'The Genius of Uberlândia'. Subsequently, I was summoned as a witness for both the defense and prosecution in the process conducted by the Brazilian Attorney General's Office.",
+    "paragraph4": "This experience solidified my conviction that God is sovereign even in the valleys."
+  },
+  "family": {
+    "title": "Family",
+    "paragraph1": "I am married to the wonderful Heloísa Cristina and father of four incredible children: Emily (13), Sofia (10), Ravi (7), and Nicole (3).",
+    "paragraph2": "I am the youngest among my siblings Quesia, Dan, Júnia, and Sara, with whom I maintain a relationship of love and friendship."
+  },
+  "pastoral_mission": {
+    "title": "Pastoral Life and Mission",
+    "paragraph1": "As a pastor, writer, and mentor, I seek to inspire people to fully trust in God.",
+    "paragraph2": "I am the author of the book 'Desista do Controle' (Give Up Control), a work about surrender and total dependence on the Lord.",
+    "paragraph3": "I am also an investor in social projects in Africa, especially in Mozambique, through Missão NASCE, which receives 20% of Gaio's profits to support families and children in vulnerable situations."
+  },
+  "career_entrepreneurship": {
+    "title": "Career and Entrepreneurship",
+    "intro": "I have been an entrepreneur for over 25 years, having founded companies such as:",
+    "companies": {
+      "loja_rentavel": "Loja Rentável",
+      "i_varejo": "i-Varejo",
+      "lince": "Lince (sold to Grupo Algar in 2014, where I worked as an executive for two years)",
+      "aionow": "AioNow",
+      "beelong": "Beelong",
+      "gaio_dataos": "Gaio DataOS"
+    },
+    "beelong_role": "At Beelong, an American technology company focused on direct sales teams, I am Chief Strategy Officer, alongside Vince (USA) and Calebe (Brazil).",
+    "gaio_role": "At Gaio, I am founder and CEO.",
+    "gaio_description": "Gaio is a data intelligence startup that develops Gaio DataOS, a complete data operating system — capable of collecting, storing, processing, and analyzing billions of pieces of information in seconds, with Machine Learning, AI, and Business Intelligence features."
+  },
+  "recognitions_achievements": {
+    "title": "Recognitions and Achievements",
+    "item1": "🏆 Winner of InovAtiva Brasil, the largest startup acceleration program of the Federal Government (1st place among over 3,000).",
+    "item2": "🌍 Selected by SEBRAE-MG to represent Brazil at GITEX Dubai 2025, the largest technology event in the Middle East.",
+    "item3": "💳 Winner of the VISA Acceleration Program, with a one-month immersion in Silicon Valley, visiting Google, Airbnb, Meta, X, and Square.",
+    "item4": "🏅 GPTW (Great Place to Work) Seal with maximum score (100/100) in 2025, leading Gaio with empathy, courage, and excellence."
+  },
+  "professional_experience": {
+    "title": "Professional Experience",
+    "intro": "I worked as an employee and participated in advanced data intelligence projects in various public and private institutions:",
+    "institutions": {
+      "tcu": "Tribunal de Contas da União (TCU)",
+      "tce_ce": "Tribunal de Contas do Ceará (TCE-CE)",
+      "secretarias_fazenda": "Secretarias de Fazenda (MG, MA, ES, MT)",
+      "ministerio_planejamento": "Ministério do Planejamento",
+      "procuradoria_es": "Procuradoria-Geral do Estado do ES",
+      "bnb": "Banco do Nordeste (BNB)",
+      "banpara": "Banpará",
+      "embraer": "Embraer",
+      "oi": "Oi",
+      "algar_telecom": "Algar Telecom",
+      "martins_atacadista": "Martins Atacadista",
+      "vox_populi": "Vox Populi"
+    },
+    "professor_role": "I was also a postgraduate professor in Data Science at PUC Minas and a professor at Jocum (YWAM)."
+  },
+  "speaker_mentor": {
+    "title": "Speaker and Mentor",
+    "paragraph1": "Speaker at international Gartner and Informa events, I share about faith, technology, and purpose.",
+    "paragraph2": "I mentor entrepreneurs and young people at the beginning of their careers, helping them find direction and purpose in what they do."
+  },
+  "leadership_values": {
+    "title": "Leadership and Values",
+    "paragraph1": "I lead by example.",
+    "paragraph2": "I believe that loving is not always pleasing — it is helping people become better. I once fixed a colleague's bumper and, in the same spirit of justice, had to dismiss three nephews on the same day. I do everything with excellence, as if for God."
+  },
+  "international_experience": {
+    "title": "International Experience",
+    "intro": "I have worked and learned in various countries and cities around the world:",
+    "usa": "USA: San Francisco (Silicon Valley), Miami, Orlando, New York, Boston, Austin, Houston, Dallas, San Antonio",
+    "europe": "Europe: Paris, Lyon, London, Milan, Geneva, Dortmund, Frankfurt",
+    "latin_america": "Latin America: Buenos Aires, Mexico City",
+    "middle_east": "Middle East: Dubai, Abu Dhabi, Sharjah",
+    "brazil": "Brazil: I have visited almost all state capitals in the country"
+  },
+  "technical_skills": {
+    "title": "Technical Skills",
+    "skills": "Gaio DataOS, SAS, RapidMiner, KNIME, IBM Analytics, Watson, Tableau, QlikView, Python, SQL, Oracle, MySQL, SQL Server, Teradata, MemSQL, Docker, Linux, Windows, macOS, CRM Tools, MS Office, PHP"
+  },
+  "relational_characteristics": {
+    "title": "Relational Characteristics",
+    "characteristics": "Innovative, Generous, Self-control, Pleasure in teaching, Patience, Intensity, Love"
+  },
+  "personal_philosophy": {
+    "title": "Personal Philosophy",
+    "quote": "“There is inner peace even amidst outer war.”",
+    "explanation": "I live with serenity in chaos, conviction in uncertainty, and unwavering faith in God's purpose."
+  },
+  "footer": {
+    "made_with": "Made with Dyad"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "header": {
+    "title": "Éder Balbino",
+    "home": "Início",
+    "about": "Sobre",
+    "career": "Carreira",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Quem é Éder Balbino",
+    "subtitle": "Coragem para encarar o novo. I'm third."
+  },
+  "origins_purpose": {
+    "title": "Origens e Propósito",
+    "paragraph1": "Nasci em um lar simples em Belo Horizonte (MG), o quinto filho de Pedro Balbino e Maria José — um casal que me ensinou o valor da fé, da integridade e da generosidade. Meu pai foi pastor e fundador de uma igreja Batista, e cresci cercado de música, amizade e espiritualidade. Fui baterista na juventude e tinha paixão por rock’n roll.",
+    "paragraph2": "Desde os 7 anos de idade, sonhava em empreender. Juntava moedas para um dia ter minha própria empresa — embora tenha gasto tudo com picolés da Dona Teófila quando amigos vieram me visitar. Foi a primeira de muitas lições sobre investimento e generosidade."
+  },
+  "education_learning": {
+    "title": "Formação e Aprendizado",
+    "paragraph1": "Sou graduado em Estatística e pós-graduado em Gestão Estratégica da Informação pela UFMG, uma das três mais renomadas universidades do Brasil.",
+    "paragraph2": "Também sou graduado em Teologia pela Sociedade de Estudos Bíblicos Interdisciplinares (SEBI), em Brasília.",
+    "paragraph3": "Meu inglês nasceu de um desafio pessoal: estudei 12 horas por dia durante três meses e concluí todo o curso da English Live (antiga English Town). O esforço foi recompensado: fiquei em 1º lugar no ranking mundial, com o dobro de pontos do segundo colocado."
+  },
+  "faith_resilience": {
+    "title": "Fé e Resiliência",
+    "paragraph1": "Sou um homem de fé reformada e pastor de missões na Igreja Missão VIDE (Visão Integral do Evangelho), onde lidero equipes que apoiam 20 famílias missionárias em países como Moçambique, Angola, Tunísia, Espanha, França e Brasil.",
+    "paragraph2": "Acredito na soberania de Deus e na transformação através do sofrimento. Em 2023, enfrentei uma das maiores provações da minha vida ao ser alvo de uma operação da Polícia Federal autorizada pelo Ministro Alexandre de Moraes. Fui investigado por uma trama política que envolveu o então presidente Jair Bolsonaro, após meu sistema identificar falhas nas urnas eletrônicas.",
+    "paragraph3": "Após 10 meses de apuração, a Polícia Federal concluiu que eu havia dito a verdade e feito tudo corretamente. O caso ganhou repercussão nacional e internacional, e fui chamado de “O Gênio de Uberlândia”. Posteriormente fui convocado a ser testemunha tanto de defesa quanto de acusação no processo conduzido pela Procuradoria-Geral da República brasileira.",
+    "paragraph4": "Essa experiência consolidou minha convicção de que Deus é soberano mesmo nos vales."
+  },
+  "family": {
+    "title": "Família",
+    "paragraph1": "Sou casado com a maravilhosa Heloísa Cristina e pai de quatro crianças incríveis: Emily (13), Sofia (10), Ravi (7) e Nicole (3).",
+    "paragraph2": "Sou o caçula entre meus irmãos Quesia, Dan, Júnia e Sara, com quem mantenho um relacionamento de amor e amizade."
+  },
+  "pastoral_mission": {
+    "title": "Vida Pastoral e Missão",
+    "paragraph1": "Como pastor, escritor e mentor, busco inspirar pessoas a confiarem plenamente em Deus.",
+    "paragraph2": "Sou autor do livro “Desista do Controle”, uma obra sobre rendição e dependência total do Senhor.",
+    "paragraph3": "Também sou investidor de projetos sociais na África, especialmente em Moçambique, por meio da Missão NASCE, que recebe 20% dos lucros da Gaio para apoiar famílias e crianças em situação de vulnerabilidade."
+  },
+  "career_entrepreneurship": {
+    "title": "Carreira e Empreendedorismo",
+    "intro": "Sou empreendedor há mais de 25 anos, tendo fundado empresas como:",
+    "companies": {
+      "loja_rentavel": "Loja Rentável",
+      "i_varejo": "i-Varejo",
+      "lince": "Lince (vendida ao Grupo Algar em 2014, onde atuei como executivo por dois anos)",
+      "aionow": "AioNow",
+      "beelong": "Beelong",
+      "gaio_dataos": "Gaio DataOS"
+    },
+    "beelong_role": "Na Beelong, empresa americana de tecnologia voltada para equipes de vendas diretas, sou Chief Strategy Officer, ao lado de Vince (EUA) e Calebe (Brasil).",
+    "gaio_role": "Na Gaio, sou fundador e CEO.",
+    "gaio_description": "A Gaio é uma startup de inteligência de dados que desenvolve o Gaio DataOS, um sistema operacional de dados completo — capaz de coletar, armazenar, processar e analisar bilhões de informações em segundos, com recursos de Machine Learning, IA e Business Intelligence."
+  },
+  "recognitions_achievements": {
+    "title": "Reconhecimentos e Conquistas",
+    "item1": "🏆 Vencedor do InovAtiva Brasil, maior programa de aceleração de startups do Governo Federal (1º lugar entre mais de 3.000).",
+    "item2": "🌍 Selecionado pelo SEBRAE-MG para representar o Brasil na GITEX Dubai 2025, o maior evento de tecnologia do Oriente Médio.",
+    "item3": "💳 Vencedor do Programa de Aceleração da VISA, com imersão de um mês no Vale do Silício, visitando Google, Airbnb, Meta, X e Square.",
+    "item4": "🏅 Selo GPTW (Great Place to Work) com pontuação máxima (100/100) em 2025, liderando a Gaio com empatia, coragem e excelência."
+  },
+  "professional_experience": {
+    "title": "Experiência Profissional",
+    "intro": "Fui funcionário e atuei em projetos de inteligência avançada de dados em diversas instituições públicas e privadas:",
+    "institutions": {
+      "tcu": "Tribunal de Contas da União (TCU)",
+      "tce_ce": "Tribunal de Contas do Ceará (TCE-CE)",
+      "secretarias_fazenda": "Secretarias de Fazenda (MG, MA, ES, MT)",
+      "ministerio_planejamento": "Ministério do Planejamento",
+      "procuradoria_es": "Procuradoria-Geral do Estado do ES",
+      "bnb": "Banco do Nordeste (BNB)",
+      "banpara": "Banpará",
+      "embraer": "Embraer",
+      "oi": "Oi",
+      "algar_telecom": "Algar Telecom",
+      "martins_atacadista": "Martins Atacadista",
+      "vox_populi": "Vox Populi"
+    },
+    "professor_role": "Fui também professor de pós-graduação em Ciência de Dados na PUC Minas e professor na Jocum (YWAM)."
+  },
+  "speaker_mentor": {
+    "title": "Palestrante e Mentor",
+    "paragraph1": "Palestrante em eventos internacionais da Gartner e Informa, compartilho sobre fé, tecnologia e propósito.",
+    "paragraph2": "Sou mentor de empreendedores e jovens em início de carreira, ajudando-os a encontrar direção e propósito no que fazem."
+  },
+  "leadership_values": {
+    "title": "Liderança e Valores",
+    "paragraph1": "Lidero pelo exemplo.",
+    "paragraph2": "Acredito que amar não é agradar sempre — é ajudar as pessoas a se tornarem melhores. Já consertei o para-choque de um colaborador e, no mesmo espírito de justiça, precisei demitir três sobrinhos em um mesmo dia. Faço tudo com excelência, como que para Deus."
+  },
+  "international_experience": {
+    "title": "Experiência Internacional",
+    "intro": "Atuei e aprendi em diversos países e cidades ao redor do mundo:",
+    "usa": "EUA: San Francisco (Vale do Silício), Miami, Orlando, Nova York, Boston, Austin, Houston, Dallas, San Antonio",
+    "europe": "Europa: Paris, Lyon, Londres, Milão, Genebra, Dortmund, Frankfurt",
+    "latin_america": "América Latina: Buenos Aires, Cidade do México",
+    "middle_east": "Oriente Médio: Dubai, Abu Dhabi, Sharjah",
+    "brazil": "Brasil: passei em quase todas as capitais do país"
+  },
+  "technical_skills": {
+    "title": "Competências Técnicas",
+    "skills": "Gaio DataOS, SAS, RapidMiner, KNIME, IBM Analytics, Watson, Tableau, QlikView, Python, SQL, Oracle, MySQL, SQL Server, Teradata, MemSQL, Docker, Linux, Windows, macOS, CRM Tools, MS Office, PHP"
+  },
+  "relational_characteristics": {
+    "title": "Características Relacionais",
+    "characteristics": "Inovador, Generoso, Domínio próprio, Prazer em ensinar, Paciência, Intensidade, Amor"
+  },
+  "personal_philosophy": {
+    "title": "Filosofia Pessoal",
+    "quote": "“Há paz interior mesmo em meio à guerra exterior.”",
+    "explanation": "Vivo com serenidade no caos, convicção na incerteza e fé inabalável no propósito de Deus."
+  },
+  "footer": {
+    "made_with": "Feito com Dyad"
+  }
+}
