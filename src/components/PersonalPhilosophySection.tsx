@@ -14,7 +14,7 @@ const PersonalPhilosophySection: React.FC<PersonalPhilosophySectionProps> = ({ i
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('personal_philosophy.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-left"> {/* Alinhado à esquerda */}
+        <p className="text-lg text-muted-foreground mb-8 text-left">
           {t('personal_philosophy.intro_short')}
         </p>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -25,7 +25,7 @@ const PersonalPhilosophySection: React.FC<PersonalPhilosophySectionProps> = ({ i
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="text-left"> {/* Alinhado à esquerda */}
+          <div className="text-left">
             <p className="italic text-xl md:text-2xl font-semibold mb-4">
                 &ldquo;{t('personal_philosophy.quote')}&rdquo;
             </p>

@@ -14,7 +14,7 @@ const RecognitionsAchievementsSection: React.FC<RecognitionsAchievementsSectionP
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('recognitions_achievements.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-left"> {/* Alinhado à esquerda */}
+        <p className="text-lg text-muted-foreground mb-8 text-left">
           {t('recognitions_achievements.intro_short')}
         </p>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -25,7 +25,7 @@ const RecognitionsAchievementsSection: React.FC<RecognitionsAchievementsSectionP
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-lg text-muted-foreground text-left">{t('recognitions_achievements.content')}</p> {/* Alinhado à esquerda */}
+          <p className="text-lg text-muted-foreground text-left">{t('recognitions_achievements.content')}</p>
         </div>
       </div>
     </section>

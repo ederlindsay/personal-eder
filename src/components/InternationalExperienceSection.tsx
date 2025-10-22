@@ -14,7 +14,7 @@ const InternationalExperienceSection: React.FC<InternationalExperienceSectionPro
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('international_experience.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-left"> {/* Alinhado à esquerda */}
+        <p className="text-lg text-muted-foreground mb-8 text-left">
           {t('international_experience.intro_short')}
         </p>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -25,7 +25,7 @@ const InternationalExperienceSection: React.FC<InternationalExperienceSectionPro
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-lg text-muted-foreground text-left">{t('international_experience.content')}</p> {/* Alinhado à esquerda */}
+          <p className="text-lg text-muted-foreground text-left">{t('international_experience.content')}</p>
         </div>
       </div>
     </section>
