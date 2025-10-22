@@ -32,12 +32,12 @@
     "title": "Family",
     "intro_short": "Meet the most important people in my life: my wife, children, parents, and siblings.",
     "close_family": {
-      "title": "Close Family (Wife and Children)",
+      "title": "Family",
       "summary": "Meet my wife Heloísa Cristina and our four amazing children.",
       "content": "I am married to the wonderful Heloísa Cristina and father of four incredible children: Emily (13), Sofia (10), Ravi (7), and Nicole (3)."
     },
     "extended_family": {
-      "title": "Extended Family (Parents and Siblings)",
+      "title": "Extended Family",
       "summary": "Learn about my parents and siblings.",
       "content": "I am the youngest among my siblings Quesia, Dan, Júnia, and Sara, with whom I maintain a relationship of love and friendship."
     }
@@ -64,7 +64,7 @@
       "content": "I hold a degree in Statistics and a postgraduate degree in Strategic Information Management from UFMG, one of Brazil's three most renowned universities."
     },
     "theology": {
-      "title": "Theology",
+      "title": "Teology",
       "content": "I also have a degree in Theology from the Society of Interdisciplinary Biblical Studies (SEBI) in Brasília."
     },
     "english": {

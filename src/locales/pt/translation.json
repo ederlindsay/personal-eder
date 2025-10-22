@@ -32,12 +32,12 @@
     "title": "Família",
     "intro_short": "Conheça as pessoas mais importantes da minha vida: minha esposa, filhos, pais e irmãos.",
     "close_family": {
-      "title": "Família Próxima (Esposa e Filhos)",
+      "title": "Família",
       "summary": "Conheça minha esposa Heloísa Cristina e nossos quatro filhos incríveis.",
       "content": "Sou casado com a maravilhosa Heloísa Cristina e pai de quatro crianças incríveis: Emily (13), Sofia (10), Ravi (7) e Nicole (3)."
     },
     "extended_family": {
-      "title": "Família Estendida (Pais e Irmãos)",
+      "title": "Família estendida",
       "summary": "Saiba mais sobre meus pais e irmãos.",
       "content": "Sou o caçula entre meus irmãos Quesia, Dan, Júnia e Sara, com quem mantenho um relacionamento de amor e amizade."
     }
