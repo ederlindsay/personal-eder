@@ -1,13 +1,11 @@
 {
   "header": {
     "title": "Eder Balbino",
-    "home": "Home"
-  },
-  "menu": {
+    "home": "Home",
     "about": "About",
     "career": "Career",
-    "philosophy": "Philosophy & Values",
-    "skills": "Skills & Experience"
+    "experience": "Experience",
+    "contact": "Contact"
   },
   "common": {
     "learn_more": "Learn More",
@@ -36,16 +34,10 @@
   },
   "faith_resilience": {
     "title": "Faith and Resilience",
-    "mission": {
-      "title": "Mission",
-      "paragraph1": "I am a man of reformed faith and a missions pastor at Igreja Missão VIDE (Integral Vision of the Gospel), where I lead teams that support 20 missionary families in countries such as Mozambique, Angola, Tunisia, Spain, France, and Brazil."
-    },
-    "chaos": {
-      "title": "Chaos",
-      "paragraph1": "I believe in God's sovereignty and transformation through suffering. In 2023, I faced one of the greatest trials of my life when I was targeted by a Federal Police operation authorized by Minister Alexandre de Moraes. I was investigated for a political plot involving then-president Jair Bolsonaro, after my system identified flaws in electronic voting machines.",
-      "paragraph2": "After 10 months of investigation, the Federal Police concluded that I had told the truth and done everything correctly. The case gained national and international repercussion, and I was called 'The Genius of Uberlândia'. Subsequently, I was summoned as a witness for both the defense and prosecution in the process conducted by the Brazilian Attorney General's Office.",
-      "paragraph3": "This experience solidified my conviction that God is sovereign even in the valleys."
-    }
+    "paragraph1": "I am a man of reformed faith and a missions pastor at Igreja Missão VIDE (Integral Vision of the Gospel), where I lead teams that support 20 missionary families in countries such as Mozambique, Angola, Tunisia, Spain, France, and Brazil.",
+    "paragraph2": "I believe in God's sovereignty and transformation through suffering. In 2023, I faced one of the greatest trials of my life when I was targeted by a Federal Police operation authorized by Minister Alexandre de Moraes. I was investigated for a political plot involving then-president Jair Bolsonaro, after my system identified flaws in electronic voting machines.",
+    "paragraph3": "After 10 months of investigation, the Federal Police concluded that I had told the truth and done everything correctly. The case gained national and international repercussion, and I was called 'The Genius of Uberlândia'. Subsequently, I was summoned as a witness for both the defense and prosecution in the process conducted by the Brazilian Attorney General's Office.",
+    "paragraph4": "This experience solidified my conviction that God is sovereign even in the valleys."
   },
   "family": {
     "title": "Family",
