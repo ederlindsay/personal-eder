@@ -1,11 +1,13 @@
 {
   "header": {
     "title": "Éder Balbino",
-    "home": "Início",
+    "home": "Início"
+  },
+  "menu": {
     "about": "Sobre",
     "career": "Carreira",
-    "experience": "Experiência",
-    "contact": "Contato"
+    "philosophy": "Filosofia e Valores",
+    "skills": "Habilidades e Experiência"
   },
   "common": {
     "learn_more": "Saiba Mais",
@@ -34,10 +36,16 @@
   },
   "faith_resilience": {
     "title": "Fé e Resiliência",
-    "paragraph1": "Sou um homem de fé reformada e pastor de missões na Igreja Missão VIDE (Visão Integral do Evangelho), onde lidero equipes que apoiam 20 famílias missionárias em países como Moçambique, Angola, Tunísia, Espanha, França e Brasil.",
-    "paragraph2": "Acredito na soberania de Deus e na transformação através do sofrimento. Em 2023, enfrentei uma das maiores provações da minha vida ao ser alvo de uma operação da Polícia Federal autorizada pelo Ministro Alexandre de Moraes. Fui investigado por uma trama política que envolveu o então presidente Jair Bolsonaro, após meu sistema identificar falhas nas urnas eletrônicas.",
-    "paragraph3": "Após 10 meses de apuração, a Polícia Federal concluiu que eu havia dito a verdade e feito tudo corretamente. O caso ganhou repercussão nacional e internacional, e fui chamado de “O Gênio de Uberlândia”. Posteriormente fui convocado a ser testemunha tanto de defesa quanto de acusação no processo conduzido pela Procuradoria-Geral da República brasileira.",
-    "paragraph4": "Essa experiência consolidou minha convicção de que Deus é soberano mesmo nos vales."
+    "mission": {
+      "title": "Missão",
+      "paragraph1": "Sou um homem de fé reformada e pastor de missões na Igreja Missão VIDE (Visão Integral do Evangelho), onde lidero equipes que apoiam 20 famílias missionárias em países como Moçambique, Angola, Tunísia, Espanha, França e Brasil."
+    },
+    "chaos": {
+      "title": "Caos",
+      "paragraph1": "Acredito na soberania de Deus e na transformação através do sofrimento. Em 2023, enfrentei uma das maiores provações da minha vida ao ser alvo de uma operação da Polícia Federal autorizada pelo Ministro Alexandre de Moraes. Fui investigado por uma trama política que envolveu o então presidente Jair Bolsonaro, após meu sistema identificar falhas nas urnas eletrônicas.",
+      "paragraph2": "Após 10 meses de apuração, a Polícia Federal concluiu que eu havia dito a verdade e feito tudo corretamente. O caso ganhou repercussão nacional e internacional, e fui chamado de “O Gênio de Uberlândia”. Posteriormente fui convocado a ser testemunha tanto de defesa quanto de acusação no processo conduzido pela Procuradoria-Geral da República brasileira.",
+      "paragraph3": "Essa experiência consolidou minha convicção de que Deus é soberano mesmo nos vales."
+    }
   },
   "family": {
     "title": "Família",
