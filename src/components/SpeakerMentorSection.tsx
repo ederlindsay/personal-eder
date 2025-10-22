@@ -1,7 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import DetailDialog from './DetailDialog';
-import { Button } from '@/components/ui/button';
 
 interface SpeakerMentorSectionProps {
   id: string;
@@ -9,44 +7,24 @@ interface SpeakerMentorSectionProps {
 
 const SpeakerMentorSection: React.FC<SpeakerMentorSectionProps> = ({ id }) => {
   const { t } = useTranslation();
-  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t border-gray-200 dark:border-gray-800">
+    <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
       <div className="container max-w-4xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
           {t('speaker_mentor.title')}
         </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-lg text-muted-foreground">
-            <p>{t('speaker_mentor.paragraph1')}</p>
-            <p>{t('speaker_mentor.paragraph2')}</p>
-            <Button onClick={() => setIsDialogOpen(true)} className="mt-4">
-              {t('common.learn_more')}
-            </Button>
-          </div>
-          <div className="relative w-full h-72 rounded-lg overflow-hidden group cursor-pointer" onClick={() => setIsDialogOpen(true)}>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+           <div className="relative w-full h-64 rounded-lg overflow-hidden">
             <img
               src="https://picsum.photos/seed/eder-speaker/800/600"
-              alt="Palestrante e Mentor"
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              alt={t('speaker_mentor.title')}
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-xl font-semibold">{t('common.click_for_details')}</span>
-            </div>
           </div>
+          <p className="text-lg text-muted-foreground">{t('speaker_mentor.content')}</p>
         </div>
       </div>
-
-      <DetailDialog
-        isOpen={isDialogOpen}
-        onClose={() => setIsDialogOpen(false)}
-        title={t('speaker_mentor.title')}
-        imageSrc="https://picsum.photos/seed/eder-speaker/1200/800"
-      >
-        <p>{t('speaker_mentor.paragraph1')}</p>
-        <p>{t('speaker_mentor.paragraph2')}</p>
-      </DetailDialog>
     </section>
   );
 };

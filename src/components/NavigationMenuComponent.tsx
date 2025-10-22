@@ -53,119 +53,76 @@ const NavigationMenuComponent = () => {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{t('origins_purpose.title')}</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="#origins-purpose"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      {t('origins_purpose.title')}
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      {t('origins_purpose.intro_short')}
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="#origins-purpose-p1" title={t('origins_purpose.paragraph1_short_title')}>
-                {t('origins_purpose.paragraph1_summary')}
-              </ListItem>
-              <ListItem href="#origins-purpose-p2" title={t('origins_purpose.paragraph2_short_title')}>
-                {t('origins_purpose.paragraph2_summary')}
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>{t('family.title')}</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{t('header.biography')}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              <ListItem href="#family-close" title={t('family.close_family.title')}>
+              <ListItem href="#origins-purpose" title={t('origins_purpose.title')}>
+                {t('origins_purpose.intro_short')}
+              </ListItem>
+              <ListItem href="#family" title={t('family.title')}>
                 {t('family.close_family.summary')}
               </ListItem>
-              <ListItem href="#family-extended" title={t('family.extended_family.title')}>
-                {t('family.extended_family.summary')}
+              <ListItem href="#faith-resilience" title={t('faith_resilience.title')}>
+                {t('faith_resilience.mission.content').substring(0, 100)}...
+              </ListItem>
+               <ListItem href="#education-learning" title={t('education_learning.title')}>
+                {t('education_learning.academic.content').substring(0, 100)}...
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink href="#education-learning" className={navigationMenuTriggerStyle()}>
-            {t('education_learning.title')}
-          </NavigationMenuLink>
+          <NavigationMenuTrigger>{t('header.career')}</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              <ListItem href="#career-entrepreneurship" title={t('career_entrepreneurship.title')}>
+                {t('career_entrepreneurship.companies.content').substring(0, 100)}...
+              </ListItem>
+              <ListItem href="#professional-experience" title={t('professional_experience.title')}>
+                 {t('professional_experience.consulting.content').substring(0, 100)}...
+              </ListItem>
+              <ListItem href="#recognitions-achievements" title={t('recognitions_achievements.title')}>
+                 {t('recognitions_achievements.content').substring(0, 100)}...
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink href="#faith-resilience" className={navigationMenuTriggerStyle()}>
-            {t('faith_resilience.title')}
-          </NavigationMenuLink>
+          <NavigationMenuTrigger>{t('header.profile')}</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              <ListItem href="#leadership-values" title={t('leadership_values.title')}>
+                {t('leadership_values.content').substring(0, 100)}...
+              </ListItem>
+              <ListItem href="#speaker-mentor" title={t('speaker_mentor.title')}>
+                {t('speaker_mentor.content').substring(0, 100)}...
+              </ListItem>
+              <ListItem href="#international-experience" title={t('international_experience.title')}>
+                {t('international_experience.content').substring(0, 100)}...
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#pastoral-mission" className={navigationMenuTriggerStyle()}>
-            {t('pastoral_mission.title')}
-          </NavigationMenuLink>
+         <NavigationMenuItem>
+          <NavigationMenuTrigger>{t('header.skills')}</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              <ListItem href="#technical-skills" title={t('technical_skills.title')}>
+                {t('technical_skills.skills').substring(0, 100)}...
+              </ListItem>
+              <ListItem href="#relational-characteristics" title={t('relational_characteristics.title')}>
+                {t('relational_characteristics.characteristics').substring(0, 100)}...
+              </ListItem>
+              <ListItem href="#personal-philosophy" title={t('personal_philosophy.title')}>
+                {t('personal_philosophy.explanation')}
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#career-entrepreneurship" className={navigationMenuTriggerStyle()}>
-            {t('career_entrepreneurship.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#recognitions-achievements" className={navigationMenuTriggerStyle()}>
-            {t('recognitions_achievements.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#professional-experience" className={navigationMenuTriggerStyle()}>
-            {t('professional_experience.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#speaker-mentor" className={navigationMenuTriggerStyle()}>
-            {t('speaker_mentor.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#leadership-values" className={navigationMenuTriggerStyle()}>
-            {t('leadership_values.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#international-experience" className={navigationMenuTriggerStyle()}>
-            {t('international_experience.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#technical-skills" className={navigationMenuTriggerStyle()}>
-            {t('technical_skills.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#relational-characteristics" className={navigationMenuTriggerStyle()}>
-            {t('relational_characteristics.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink href="#personal-philosophy" className={navigationMenuTriggerStyle()}>
-            {t('personal_philosophy.title')}
-          </NavigationMenuLink>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

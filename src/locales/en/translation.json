@@ -2,15 +2,13 @@
   "header": {
     "title": "Eder Balbino",
     "home": "Home",
-    "about": "About",
+    "biography": "Biography",
     "career": "Career",
-    "experience": "Experience",
-    "contact": "Contact"
+    "profile": "Profile",
+    "skills": "Skills"
   },
   "common": {
-    "learn_more": "Learn More",
-    "click_for_details": "Click for details",
-    "map_note": "Note: The interactive map feature with clickable photos is a complex feature and is currently represented by a placeholder. This would involve integrating a mapping library and managing image galleries per location."
+    "learn_more": "Learn More"
   },
   "hero": {
     "title": "Who is Eder Balbino",
@@ -19,104 +17,110 @@
   "origins_purpose": {
     "title": "Origins and Purpose",
     "intro_short": "Discover my humble beginnings and the journey that shaped my purpose.",
-    "paragraph1": "I was born in a simple home in Belo Horizonte (MG), the fifth child of Pedro Balbino and Maria José — a couple who taught me the value of faith, integrity, and generosity. My father was a pastor and founder of a Baptist church, and I grew up surrounded by music, friendship, and spirituality. I was a drummer in my youth and had a passion for rock'n roll.",
-    "paragraph1_short_title": "Humble Beginnings",
-    "paragraph1_summary": "Born in Belo Horizonte, I learned faith, integrity, and generosity from my parents.",
-    "paragraph2": "Since I was 7 years old, I dreamed of entrepreneurship. I saved coins to one day have my own company — although I spent it all on popsicles from Dona Teófila when friends came to visit. It was the first of many lessons about investment and generosity.",
-    "paragraph2_short_title": "Early Entrepreneurial Dreams",
-    "paragraph2_summary": "My childhood dream of entrepreneurship and early lessons in investment and generosity."
-  },
-  "education_learning": {
-    "title": "Education and Learning",
-    "paragraph1": "I hold a degree in Statistics and a postgraduate degree in Strategic Information Management from UFMG, one of Brazil's three most renowned universities.",
-    "paragraph2": "I also have a degree in Theology from the Society of Interdisciplinary Biblical Studies (SEBI) in Brasília.",
-    "paragraph3": "My English was born from a personal challenge: I studied 12 hours a day for three months and completed the entire English Live (formerly English Town) course. The effort paid off: I ranked 1st worldwide, with double the points of the second-place finisher."
-  },
-  "faith_resilience": {
-    "title": "Faith and Resilience",
-    "paragraph1": "I am a man of reformed faith and a missions pastor at Igreja Missão VIDE (Integral Vision of the Gospel), where I lead teams that support 20 missionary families in countries such as Mozambique, Angola, Tunisia, Spain, France, and Brazil.",
-    "paragraph2": "I believe in God's sovereignty and transformation through suffering. In 2023, I faced one of the greatest trials of my life when I was targeted by a Federal Police operation authorized by Minister Alexandre de Moraes. I was investigated for a political plot involving then-president Jair Bolsonaro, after my system identified flaws in electronic voting machines.",
-    "paragraph3": "After 10 months of investigation, the Federal Police concluded that I had told the truth and done everything correctly. The case gained national and international repercussion, and I was called 'The Genius of Uberlândia'. Subsequently, I was summoned as a witness for both the defense and prosecution in the process conducted by the Brazilian Attorney General's Office.",
-    "paragraph4": "This experience solidified my conviction that God is sovereign even in the valleys."
+    "humble_beginnings": {
+      "title": "Humble Beginnings",
+      "summary": "Born in Belo Horizonte, I learned faith, integrity, and generosity from my parents.",
+      "content": "I was born in a simple home in Belo Horizonte (MG), the fifth child of Pedro Balbino and Maria José — a couple who taught me the value of faith, integrity, and generosity. My father was a pastor and founder of a Baptist church, and I grew up surrounded by music, friendship, and spirituality. I was a drummer in my youth and had a passion for rock'n roll."
+    },
+    "early_dreams": {
+      "title": "Early Entrepreneurial Dreams",
+      "summary": "My childhood dream of entrepreneurship and early lessons in investment and generosity.",
+      "content": "Since I was 7 years old, I dreamed of entrepreneurship. I saved coins to one day have my own company — although I spent it all on popsicles from Dona Teófila when friends came to visit. It was the first of many lessons about investment and generosity."
+    }
   },
   "family": {
     "title": "Family",
     "close_family": {
       "title": "Close Family (Wife and Children)",
-      "paragraph1": "I am married to the wonderful Heloísa Cristina and father of four incredible children: Emily (13), Sofia (10), Ravi (7), and Nicole (3).",
-      "summary": "Meet my wife Heloísa Cristina and our four amazing children: Emily, Sofia, Ravi, and Nicole."
+      "summary": "Meet my wife Heloísa Cristina and our four amazing children.",
+      "content": "I am married to the wonderful Heloísa Cristina and father of four incredible children: Emily (13), Sofia (10), Ravi (7), and Nicole (3)."
     },
     "extended_family": {
       "title": "Extended Family (Parents and Siblings)",
-      "paragraph1": "I am the youngest among my siblings Quesia, Dan, Júnia, and Sara, with whom I maintain a relationship of love and friendship.",
-      "summary": "Learn about my parents, Pedro Balbino and Maria José, and my siblings: Quesia, Dan, Júnia, and Sara."
+      "summary": "Learn about my parents and siblings.",
+      "content": "I am the youngest among my siblings Quesia, Dan, Júnia, and Sara, with whom I maintain a relationship of love and friendship."
+    }
+  },
+  "faith_resilience": {
+    "title": "Faith and Resilience",
+    "mission": {
+      "title": "Mission",
+      "content": "I am a man of reformed faith and a missions pastor at Igreja Missão VIDE (Integral Vision of the Gospel), where I lead teams that support 20 missionary families in countries such as Mozambique, Angola, Tunisia, Spain, France, and Brazil."
+    },
+    "chaos": {
+      "title": "The Chaos",
+      "content_p1": "I believe in God's sovereignty and transformation through suffering. In 2023, I faced one of the greatest trials of my life when I was targeted by a Federal Police operation authorized by Minister Alexandre de Moraes. I was investigated for a political plot involving then-president Jair Bolsonaro, after my system identified flaws in electronic voting machines.",
+      "content_p2": "After 10 months of investigation, the Federal Police concluded that I had told the truth and done everything correctly. The case gained national and international repercussion, and I was called 'The Genius of Uberlândia'. Subsequently, I was summoned as a witness for both the defense and prosecution in the process conducted by the Brazilian Attorney General's Office.",
+      "content_p3": "This experience solidified my conviction that God is sovereign even in the valleys."
+    }
+  },
+  "education_learning": {
+    "title": "Education and Learning",
+    "academic": {
+      "title": "Academic Background",
+      "content": "I hold a degree in Statistics and a postgraduate degree in Strategic Information Management from UFMG, one of Brazil's three most renowned universities."
+    },
+    "theology": {
+      "title": "Theology",
+      "content": "I also have a degree in Theology from the Society of Interdisciplinary Biblical Studies (SEBI) in Brasília."
+    },
+    "english": {
+      "title": "The English Challenge",
+      "content": "My English was born from a personal challenge: I studied 12 hours a day for three months and completed the entire English Live (formerly English Town) course. The effort paid off: I ranked 1st worldwide, with double the points of the second-place finisher."
     }
   },
   "pastoral_mission": {
     "title": "Pastoral Life and Mission",
-    "paragraph1": "As a pastor, writer, and mentor, I seek to inspire people to fully trust in God.",
-    "paragraph2": "I am the author of the book 'Desista do Controle' (Give Up Control), a work about surrender and total dependence on the Lord.",
-    "paragraph3": "I am also an investor in social projects in Africa, especially in Mozambique, through Missão NASCE, which receives 20% of Gaio's profits to support families and children in vulnerable situations."
+    "pastor": {
+      "title": "Pastor, Writer, and Mentor",
+      "content": "As a pastor, writer, and mentor, I seek to inspire people to fully trust in God."
+    },
+    "book": {
+      "title": "Book 'Give Up Control'",
+      "content": "I am the author of the book 'Desista do Controle' (Give Up Control), a work about surrender and total dependence on the Lord."
+    },
+    "social_projects": {
+      "title": "Social Projects",
+      "content": "I am also an investor in social projects in Africa, especially in Mozambique, through Missão NASCE, which receives 20% of Gaio's profits to support families and children in vulnerable situations."
+    }
   },
   "career_entrepreneurship": {
     "title": "Career and Entrepreneurship",
-    "intro": "I have been an entrepreneur for over 25 years, having founded companies such as:",
     "companies": {
-      "loja_rentavel": "Loja Rentável",
-      "i_varejo": "i-Varejo",
-      "lince": "Lince (sold to Grupo Algar in 2014, where I worked as an executive for two years)",
-      "aionow": "AioNow",
-      "beelong": "Beelong",
-      "gaio_dataos": "Gaio DataOS"
+      "title": "Founded Companies",
+      "content": "I have been an entrepreneur for over 25 years, having founded companies such as Loja Rentável, i-Varejo, Lince (sold to Grupo Algar in 2014), AioNow, Beelong, and Gaio DataOS."
     },
-    "beelong_role": "At Beelong, an American technology company focused on direct sales teams, I am Chief Strategy Officer, alongside Vince (USA) and Calebe (Brazil).",
-    "gaio_role": "At Gaio, I am founder and CEO.",
-    "gaio_description": "Gaio is a data intelligence startup that develops Gaio DataOS, a complete data operating system — capable of collecting, storing, processing, and analyzing billions of pieces of information in seconds, with Machine Learning, AI, and Business Intelligence features."
+    "current_roles": {
+      "title": "Current Roles",
+      "content": "At Beelong, I am Chief Strategy Officer. At Gaio, I am founder and CEO. Gaio develops Gaio DataOS, a complete data operating system with AI and Machine Learning."
+    }
   },
   "recognitions_achievements": {
     "title": "Recognitions and Achievements",
-    "item1": "🏆 Winner of InovAtiva Brasil, the largest startup acceleration program of the Federal Government (1st place among over 3,000).",
-    "item2": "🌍 Selected by SEBRAE-MG to represent Brazil at GITEX Dubai 2025, the largest technology event in the Middle East.",
-    "item3": "💳 Winner of the VISA Acceleration Program, with a one-month immersion in Silicon Valley, visiting Google, Airbnb, Meta, X, and Square.",
-    "item4": "🏅 GPTW (Great Place to Work) Seal with maximum score (100/100) in 2025, leading Gaio with empathy, courage, and excellence."
+    "content": "Winner of InovAtiva Brasil, selected for GITEX Dubai 2025, winner of the VISA Acceleration Program with an immersion in Silicon Valley, and a GPTW seal with a maximum score."
   },
   "professional_experience": {
     "title": "Professional Experience",
-    "intro": "I worked as an employee and participated in advanced data intelligence projects in various public and private institutions:",
-    "institutions": {
-      "tcu": "Tribunal de Contas da União (TCU)",
-      "tce_ce": "Tribunal de Contas do Ceará (TCE-CE)",
-      "secretarias_fazenda": "Secretarias de Fazenda (MG, MA, ES, MT)",
-      "ministerio_planejamento": "Ministério do Planejamento",
-      "procuradoria_es": "Procuradoria-Geral do Estado do ES",
-      "bnb": "Banco do Nordeste (BNB)",
-      "banpara": "Banpará",
-      "embraer": "Embraer",
-      "oi": "Oi",
-      "algar_telecom": "Algar Telecom",
-      "martins_atacadista": "Martins Atacadista",
-      "vox_populi": "Vox Populi"
+    "consulting": {
+      "title": "Consulting and Projects",
+      "content": "I have worked on data intelligence projects in institutions such as TCU, TCE-CE, State Treasury Departments, Ministry of Planning, BNB, Embraer, Oi, Algar Telecom, and Martins Atacadista."
     },
-    "professor_role": "I was also a postgraduate professor in Data Science at PUC Minas and a professor at Jocum (YWAM)."
+    "teaching": {
+      "title": "Teaching",
+      "content": "I was also a postgraduate professor in Data Science at PUC Minas and a professor at YWAM (Jocum)."
+    }
   },
   "speaker_mentor": {
     "title": "Speaker and Mentor",
-    "paragraph1": "Speaker at international Gartner and Informa events, I share about faith, technology, and purpose.",
-    "paragraph2": "I mentor entrepreneurs and young people at the beginning of their careers, helping them find direction and purpose in what they do."
+    "content": "A speaker at international Gartner and Informa events, I share insights on faith, technology, and purpose. I mentor entrepreneurs and young professionals."
   },
   "leadership_values": {
     "title": "Leadership and Values",
-    "paragraph1": "I lead by example.",
-    "paragraph2": "I believe that loving is not always pleasing — it is helping people become better. I once fixed a colleague's bumper and, in the same spirit of justice, had to dismiss three nephews on the same day. I do everything with excellence, as if for God."
+    "content": "I lead by example. I believe that loving is not always pleasing—it is helping people become better. I do everything with excellence, as if for God."
   },
   "international_experience": {
     "title": "International Experience",
-    "intro": "I have worked and learned in various countries and cities around the world:",
-    "usa": "USA: San Francisco (Silicon Valley), Miami, Orlando, New York, Boston, Austin, Houston, Dallas, San Antonio",
-    "europe": "Europe: Paris, Lyon, London, Milan, Geneva, Dortmund, Frankfurt",
-    "latin_america": "Latin America: Buenos Aires, Mexico City",
-    "middle_east": "Middle East: Dubai, Abu Dhabi, Sharjah",
-    "brazil": "Brazil: I have visited almost all state capitals in the country"
+    "content": "I have worked and learned in various countries and cities worldwide, including the USA (Silicon Valley, Miami, NY), Europe (Paris, London, Milan), Latin America, and the Middle East (Dubai)."
   },
   "technical_skills": {
     "title": "Technical Skills",
@@ -130,8 +134,5 @@
     "title": "Personal Philosophy",
     "quote": "“There is inner peace even amidst outer war.”",
     "explanation": "I live with serenity in chaos, conviction in uncertainty, and unwavering faith in God's purpose."
-  },
-  "footer": {
-    "made_with": "Made with Dyad"
   }
 }
