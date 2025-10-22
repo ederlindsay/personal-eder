@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+// Removed DetailDialog import
+// Removed Button import as it's no longer used for a dialog trigger
 
 interface RecognitionsAchievementsSectionProps {
   id: string;
@@ -21,8 +23,10 @@ const RecognitionsAchievementsSection: React.FC<RecognitionsAchievementsSectionP
               alt={t('recognitions_achievements.title')}
               className="w-full h-full object-cover"
             />
+            {/* Removed the click overlay as there's no dialog */}
           </div>
           <p className="text-lg text-muted-foreground">{t('recognitions_achievements.content')}</p>
+          {/* Removed Button as it was for dialog */}
         </div>
       </div>
     </section>

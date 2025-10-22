@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+// Removed DetailDialog import
+// Removed Button import as it's no longer used for a dialog trigger
 
 interface PersonalPhilosophySectionProps {
   id: string;
@@ -21,6 +23,7 @@ const PersonalPhilosophySection: React.FC<PersonalPhilosophySectionProps> = ({ i
               alt={t('personal_philosophy.title')}
               className="w-full h-full object-cover"
             />
+            {/* Removed the click overlay as there's no dialog */}
           </div>
           <div className="text-center">
             <p className="italic text-xl md:text-2xl font-semibold mb-4">

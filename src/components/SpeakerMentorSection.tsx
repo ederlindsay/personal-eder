@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+// Removed DetailDialog import
+// Removed Button import as it's no longer used for a dialog trigger
 
 interface SpeakerMentorSectionProps {
   id: string;
@@ -21,8 +23,10 @@ const SpeakerMentorSection: React.FC<SpeakerMentorSectionProps> = ({ id }) => {
               alt={t('speaker_mentor.title')}
               className="w-full h-full object-cover"
             />
+            {/* Removed the click overlay as there's no dialog */}
           </div>
           <p className="text-lg text-muted-foreground">{t('speaker_mentor.content')}</p>
+          {/* Removed Button as it was for dialog */}
         </div>
       </div>
     </section>
