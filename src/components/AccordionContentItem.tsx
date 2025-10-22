@@ -15,7 +15,7 @@ const AccordionContentItem: React.FC<AccordionContentItemProps> = ({ imageSeed, 
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="text-base text-muted-foreground space-y-4">
+      <div className="text-base text-muted-foreground space-y-4 text-left"> {/* Adicionado text-left aqui */}
         {children}
       </div>
     </div>

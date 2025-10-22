@@ -13,7 +13,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
       <div className="container max-w-4xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div className="relative w-full h-96 rounded-lg overflow-hidden">
           <img
-            src="https://picsum.photos/seed/eder-hero/1200/800"
+            src="/images/eder-balbino-hero.png"
             alt="Eder Balbino"
             className="w-full h-full object-cover"
           />

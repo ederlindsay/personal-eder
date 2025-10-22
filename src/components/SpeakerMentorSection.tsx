@@ -14,7 +14,7 @@ const SpeakerMentorSection: React.FC<SpeakerMentorSectionProps> = ({ id }) => {
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('speaker_mentor.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-center">
+        <p className="text-lg text-muted-foreground mb-8 text-left"> {/* Alinhado à esquerda */}
           {t('speaker_mentor.intro_short')}
         </p>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -25,7 +25,7 @@ const SpeakerMentorSection: React.FC<SpeakerMentorSectionProps> = ({ id }) => {
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-lg text-muted-foreground">{t('speaker_mentor.content')}</p>
+          <p className="text-lg text-muted-foreground text-left">{t('speaker_mentor.content')}</p> {/* Alinhado à esquerda */}
         </div>
       </div>
     </section>

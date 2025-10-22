@@ -16,12 +16,12 @@ const ProfessionalExperienceSection: React.FC<ProfessionalExperienceSectionProps
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('professional_experience.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-center">
+        <p className="text-lg text-muted-foreground mb-8 text-left"> {/* Alinhado à esquerda */}
           {t('professional_experience.intro_short')}
         </p>
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+        <Accordion type="single" collapsible className="w-full space-y-2"> {/* Adicionado space-y-2 para espaçamento */}
+          <AccordionItem value="item-1" className="border-none"> {/* Removido border-b */}
+            <AccordionTrigger className="text-sm px-3 py-1 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors w-fit"> {/* Botão menor e w-fit */}
               {t('professional_experience.consulting.title')}
             </AccordionTrigger>
             <AccordionContent>
@@ -30,8 +30,8 @@ const ProfessionalExperienceSection: React.FC<ProfessionalExperienceSectionProps
               </AccordionContentItem>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+          <AccordionItem value="item-2" className="border-none"> {/* Removido border-b */}
+            <AccordionTrigger className="text-sm px-3 py-1 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors w-fit"> {/* Botão menor e w-fit */}
               {t('professional_experience.teaching.title')}
             </AccordionTrigger>
             <AccordionContent>

@@ -16,26 +16,26 @@ const FamilySection: React.FC<FamilySectionProps> = ({ id }) => {
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('family.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-center">
+        <p className="text-lg text-muted-foreground mb-8 text-left"> {/* Alinhado à esquerda */}
           {t('family.intro_short')}
         </p>
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+        <Accordion type="single" collapsible className="w-full space-y-2"> {/* Adicionado space-y-2 para espaçamento */}
+          <AccordionItem value="item-1" className="border-none"> {/* Removido border-b */}
+            <AccordionTrigger className="text-sm px-3 py-1 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors w-fit"> {/* Botão menor e w-fit */}
               {t('family.close_family.title')}
             </AccordionTrigger>
             <AccordionContent>
-              <AccordionContentItem imageSeed="eder-close-family">
+              <AccordionContentItem imageSeed="familia-proxima"> {/* Usando a nova imagem */}
                 <p>{t('family.close_family.content')}</p>
               </AccordionContentItem>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+          <AccordionItem value="item-2" className="border-none"> {/* Removido border-b */}
+            <AccordionTrigger className="text-sm px-3 py-1 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors w-fit"> {/* Botão menor e w-fit */}
               {t('family.extended_family.title')}
             </AccordionTrigger>
             <AccordionContent>
-              <AccordionContentItem imageSeed="eder-extended-family">
+              <AccordionContentItem imageSeed="familia-extendida"> {/* Usando a nova imagem */}
                 <p>{t('family.extended_family.content')}</p>
               </AccordionContentItem>
             </AccordionContent>

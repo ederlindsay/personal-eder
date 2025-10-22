@@ -14,7 +14,7 @@ const RelationalCharacteristicsSection: React.FC<RelationalCharacteristicsSectio
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           {t('relational_characteristics.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-center">
+        <p className="text-lg text-muted-foreground mb-8 text-left"> {/* Alinhado à esquerda */}
           {t('relational_characteristics.intro_short')}
         </p>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -25,7 +25,7 @@ const RelationalCharacteristicsSection: React.FC<RelationalCharacteristicsSectio
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-lg text-muted-foreground">{t('relational_characteristics.characteristics')}</p>
+          <p className="text-lg text-muted-foreground text-left">{t('relational_characteristics.characteristics')}</p> {/* Alinhado à esquerda */}
         </div>
       </div>
     </section>
