@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MadeWithDyad } from './made-with-dyad';
-import { Linkedin, Whatsapp } from 'lucide-react';
+import { Linkedin, MessageSquare } from 'lucide-react'; // Changed Whatsapp to MessageSquare
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -26,7 +26,7 @@ const Footer = () => {
             className="text-foreground hover:text-primary"
             aria-label="WhatsApp"
           >
-            <Whatsapp className="h-6 w-6" />
+            <MessageSquare className="h-6 w-6" /> {/* Changed to MessageSquare */}
           </a>
         </div>
         <p className="text-sm">
