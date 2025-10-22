@@ -21,7 +21,9 @@ const CareerEntrepreneurshipSection: React.FC<CareerEntrepreneurshipSectionProps
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">{t('career_entrepreneurship.companies.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('career_entrepreneurship.companies.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-companies">
                 <p>{t('career_entrepreneurship.companies.content')}</p>
@@ -29,7 +31,9 @@ const CareerEntrepreneurshipSection: React.FC<CareerEntrepreneurshipSectionProps
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">{t('career_entrepreneurship.current_roles.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('career_entrepreneurship.current_roles.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-roles">
                 <p>{t('career_entrepreneurship.current_roles.content')}</p>

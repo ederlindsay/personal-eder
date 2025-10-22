@@ -21,7 +21,9 @@ const ProfessionalExperienceSection: React.FC<ProfessionalExperienceSectionProps
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">{t('professional_experience.consulting.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('professional_experience.consulting.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-consulting">
                 <p>{t('professional_experience.consulting.content')}</p>
@@ -29,7 +31,9 @@ const ProfessionalExperienceSection: React.FC<ProfessionalExperienceSectionProps
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">{t('professional_experience.teaching.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('professional_experience.teaching.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-teaching">
                 <p>{t('professional_experience.teaching.content')}</p>

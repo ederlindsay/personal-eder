@@ -21,7 +21,9 @@ const FamilySection: React.FC<FamilySectionProps> = ({ id }) => {
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">{t('family.close_family.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('family.close_family.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-close-family">
                 <p>{t('family.close_family.content')}</p>
@@ -29,7 +31,9 @@ const FamilySection: React.FC<FamilySectionProps> = ({ id }) => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">{t('family.extended_family.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('family.extended_family.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-extended-family">
                 <p>{t('family.extended_family.content')}</p>

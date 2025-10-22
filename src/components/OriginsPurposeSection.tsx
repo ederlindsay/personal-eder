@@ -21,7 +21,9 @@ const OriginsPurposeSection: React.FC<OriginsPurposeSectionProps> = ({ id }) => 
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">{t('origins_purpose.humble_beginnings.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('origins_purpose.humble_beginnings.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-origins-1">
                 <p>{t('origins_purpose.humble_beginnings.content')}</p>
@@ -29,7 +31,9 @@ const OriginsPurposeSection: React.FC<OriginsPurposeSectionProps> = ({ id }) => 
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">{t('origins_purpose.early_dreams.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('origins_purpose.early_dreams.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-dreams-1">
                 <p>{t('origins_purpose.early_dreams.content')}</p>

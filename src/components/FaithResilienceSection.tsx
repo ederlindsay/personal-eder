@@ -21,7 +21,9 @@ const FaithResilienceSection: React.FC<FaithResilienceSectionProps> = ({ id }) =
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">{t('faith_resilience.mission.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('faith_resilience.mission.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-mission">
                 <p>{t('faith_resilience.mission.content')}</p>
@@ -29,7 +31,9 @@ const FaithResilienceSection: React.FC<FaithResilienceSectionProps> = ({ id }) =
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">{t('faith_resilience.chaos.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('faith_resilience.chaos.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-chaos">
                 <p>{t('faith_resilience.chaos.content_p1')}</p>

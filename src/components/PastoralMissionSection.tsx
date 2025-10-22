@@ -21,7 +21,9 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">{t('pastoral_mission.pastor.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('pastoral_mission.pastor.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-pastor">
                 <p>{t('pastoral_mission.pastor.content')}</p>
@@ -29,7 +31,9 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">{t('pastoral_mission.book.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('pastoral_mission.book.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-book">
                 <p>{t('pastoral_mission.book.content')}</p>
@@ -37,7 +41,9 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-xl">{t('pastoral_mission.social_projects.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('pastoral_mission.social_projects.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-social">
                 <p>{t('pastoral_mission.social_projects.content')}</p>

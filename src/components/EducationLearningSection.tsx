@@ -21,7 +21,9 @@ const EducationLearningSection: React.FC<EducationLearningSectionProps> = ({ id 
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">{t('education_learning.academic.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('education_learning.academic.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-academic">
                 <p>{t('education_learning.academic.content')}</p>
@@ -29,7 +31,9 @@ const EducationLearningSection: React.FC<EducationLearningSectionProps> = ({ id 
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">{t('education_learning.theology.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('education_learning.theology.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-theology">
                 <p>{t('education_learning.theology.content')}</p>
@@ -37,7 +41,9 @@ const EducationLearningSection: React.FC<EducationLearningSectionProps> = ({ id 
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-xl">{t('education_learning.english.title')}</AccordionTrigger>
+            <AccordionTrigger className="text-lg px-4 py-2 border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors mb-2">
+              {t('education_learning.english.title')}
+            </AccordionTrigger>
             <AccordionContent>
               <AccordionContentItem imageSeed="eder-english">
                 <p>{t('education_learning.english.content')}</p>
