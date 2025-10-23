@@ -103,7 +103,12 @@
   "recognitions_achievements": {
     "title": "Recognitions and Achievements",
     "intro_short": "Highlights and awards that marked my professional and entrepreneurial journey.",
-    "content": "Winner of InovAtiva Brasil, selected for GITEX Dubai 2025, winner of the VISA Acceleration Program with an immersion in Silicon Valley, and a GPTW seal with a maximum score."
+    "achievements": [
+      "Winner of InovAtiva Brasil",
+      "Selected for GITEX Dubai 2025",
+      "Winner of the VISA Acceleration Program with an immersion in Silicon Valley",
+      "GPTW (Great Place to Work) seal with a maximum score"
+    ]
   },
   "professional_experience": {
     "title": "Professional Experience",

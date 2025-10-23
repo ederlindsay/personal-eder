@@ -18,6 +18,7 @@ const LeadershipValuesSection: React.FC<LeadershipValuesSectionProps> = ({ id })
           {t('leadership_values.intro_short')}
         </p>
         <div className="grid md:grid-cols-2 gap-8 items-center">
+          <p className="text-lg text-muted-foreground text-left">{t('leadership_values.content')}</p>
            <div className="relative w-full h-64 rounded-lg overflow-hidden">
             <img
               src="https://picsum.photos/seed/eder-leadership/800/600"
@@ -25,7 +26,6 @@ const LeadershipValuesSection: React.FC<LeadershipValuesSectionProps> = ({ id })
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-lg text-muted-foreground text-left">{t('leadership_values.content')}</p>
         </div>
       </div>
     </section>

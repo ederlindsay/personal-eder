@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Badge } from '@/components/ui/badge';
 
 interface TechnicalSkillsSectionProps {
   id: string;
@@ -7,6 +8,7 @@ interface TechnicalSkillsSectionProps {
 
 const TechnicalSkillsSection: React.FC<TechnicalSkillsSectionProps> = ({ id }) => {
   const { t } = useTranslation();
+  const skills = t('technical_skills.skills').split(', ');
 
   return (
     <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
@@ -25,7 +27,13 @@ const TechnicalSkillsSection: React.FC<TechnicalSkillsSectionProps> = ({ id }) =
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-lg text-muted-foreground text-left">{t('technical_skills.skills')}</p>
+          <div className="flex flex-wrap gap-2 justify-start">
+            {skills.map((skill, index) => (
+              <Badge key={index} variant="secondary" className="text-base px-3 py-1">
+                {skill}
+              </Badge>
+            ))}
+          </div>
         </div>
       </div>
     </section>

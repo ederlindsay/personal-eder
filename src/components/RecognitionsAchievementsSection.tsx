@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { CheckCircle } from 'lucide-react';
 
 interface RecognitionsAchievementsSectionProps {
   id: string;
@@ -7,6 +8,7 @@ interface RecognitionsAchievementsSectionProps {
 
 const RecognitionsAchievementsSection: React.FC<RecognitionsAchievementsSectionProps> = ({ id }) => {
   const { t } = useTranslation();
+  const achievements = t('recognitions_achievements.achievements', { returnObjects: true }) as string[];
 
   return (
     <section id={id} className="py-16 md:py-24 bg-muted text-foreground border-t">
@@ -25,7 +27,14 @@ const RecognitionsAchievementsSection: React.FC<RecognitionsAchievementsSectionP
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-lg text-muted-foreground text-left">{t('recognitions_achievements.content')}</p>
+          <ul className="space-y-4 text-left">
+            {Array.isArray(achievements) && achievements.map((achievement, index) => (
+              <li key={index} className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-1" />
+                <span className="text-lg text-muted-foreground">{achievement}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

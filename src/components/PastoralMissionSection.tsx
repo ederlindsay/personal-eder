@@ -1,6 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import SegmentedButtons from './SegmentedButtons';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import AccordionContentItem from './AccordionContentItem';
 
 interface PastoralMissionSectionProps {
@@ -9,36 +14,6 @@ interface PastoralMissionSectionProps {
 
 const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) => {
   const { t } = useTranslation();
-
-  const items = [
-    {
-      value: 'pastor',
-      label: t('pastoral_mission.pastor.title'),
-      content: (
-        <AccordionContentItem imageSeed="eder-pastor" imagePosition="left">
-          <p>{t('pastoral_mission.pastor.content')}</p>
-        </AccordionContentItem>
-      ),
-    },
-    {
-      value: 'book',
-      label: t('pastoral_mission.book.title'),
-      content: (
-        <AccordionContentItem imageSeed="eder-book" imagePosition="right">
-          <p>{t('pastoral_mission.book.content')}</p>
-        </AccordionContentItem>
-      ),
-    },
-    {
-      value: 'social_projects',
-      label: t('pastoral_mission.social_projects.title'),
-      content: (
-        <AccordionContentItem imageSeed="eder-social" imagePosition="left">
-          <p>{t('pastoral_mission.social_projects.content')}</p>
-        </AccordionContentItem>
-      ),
-    },
-  ];
 
   return (
     <section id={id} className="py-16 md:py-24 bg-muted text-foreground border-t">
@@ -49,7 +24,32 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
         <p className="text-lg text-muted-foreground mb-8 text-left">
           {t('pastoral_mission.intro_short')}
         </p>
-        <SegmentedButtons items={items} defaultValue="pastor" />
+        <Accordion type="single" collapsible defaultValue="item-1" className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>{t('pastoral_mission.pastor.title')}</AccordionTrigger>
+            <AccordionContent>
+              <AccordionContentItem imageSeed="eder-pastor" imagePosition="left">
+                <p>{t('pastoral_mission.pastor.content')}</p>
+              </AccordionContentItem>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>{t('pastoral_mission.book.title')}</AccordionTrigger>
+            <AccordionContent>
+              <AccordionContentItem imageSeed="eder-book" imagePosition="right">
+                <p>{t('pastoral_mission.book.content')}</p>
+              </AccordionContentItem>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>{t('pastoral_mission.social_projects.title')}</AccordionTrigger>
+            <AccordionContent>
+              <AccordionContentItem imageSeed="eder-social" imagePosition="left">
+                <p>{t('pastoral_mission.social_projects.content')}</p>
+              </AccordionContentItem>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </section>
   );
