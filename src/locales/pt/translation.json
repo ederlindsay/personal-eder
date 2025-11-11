@@ -103,7 +103,28 @@
   "recognitions_achievements": {
     "title": "Reconhecimentos e Conquistas",
     "intro_short": "Destaques e prêmios que marcaram minha trajetória profissional e empreendedora.",
-    "content": "Vencedor do InovAtiva Brasil, selecionado para a GITEX Dubai 2025, vencedor do Programa de Aceleração da VISA com imersão no Vale do Silício, e selo GPTW com pontuação máxima."
+    "achievements": [
+      {
+        "icon": "Trophy",
+        "title": "Vencedor do InovAtiva Brasil",
+        "description": "Reconhecido como uma das startups mais inovadoras no maior programa de aceleração do Brasil."
+      },
+      {
+        "icon": "Plane",
+        "title": "Selecionado para a GITEX Dubai 2025",
+        "description": "Escolhido para representar a inovação brasileira em um dos maiores eventos de tecnologia do mundo."
+      },
+      {
+        "icon": "CreditCard",
+        "title": "Programa de Aceleração da VISA",
+        "description": "Vencedor do programa, incluindo uma imersão de negócios no Vale do Silício."
+      },
+      {
+        "icon": "Star",
+        "title": "Selo Great Place to Work (GPTW)",
+        "description": "Conquista do selo GPTW com pontuação máxima, refletindo o compromisso com um ambiente de trabalho positivo."
+      }
+    ]
   },
   "professional_experience": {
     "title": "Experiência Profissional",

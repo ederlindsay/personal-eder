@@ -10,28 +10,19 @@ const PersonalPhilosophySection: React.FC<PersonalPhilosophySectionProps> = ({ i
 
   return (
     <section id={id} className="py-16 md:py-24 bg-background text-foreground border-t">
-      <div className="container max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+      <div className="container max-w-4xl mx-auto px-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
           {t('personal_philosophy.title')}
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-left">
+        <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
           {t('personal_philosophy.intro_short')}
         </p>
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-           <div className="relative w-full h-64 rounded-lg overflow-hidden">
-            <img
-              src="https://picsum.photos/seed/eder-philosophy/800/600"
-              alt={t('personal_philosophy.title')}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="text-left">
-            <p className="italic text-xl md:text-2xl font-semibold mb-4">
-                &ldquo;{t('personal_philosophy.quote')}&rdquo;
-            </p>
-            <p className="text-lg text-muted-foreground">{t('personal_philosophy.explanation')}</p>
-          </div>
-        </div>
+        <blockquote className="border-l-4 border-primary pl-6 italic text-2xl md:text-3xl font-serif text-left max-w-3xl mx-auto">
+          <p className="mb-4">&ldquo;{t('personal_philosophy.quote')}&rdquo;</p>
+          <footer className="text-lg not-italic text-muted-foreground">
+            &mdash; {t('personal_philosophy.explanation')}
+          </footer>
+        </blockquote>
       </div>
     </section>
   );

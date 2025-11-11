@@ -103,7 +103,28 @@
   "recognitions_achievements": {
     "title": "Recognitions and Achievements",
     "intro_short": "Highlights and awards that marked my professional and entrepreneurial journey.",
-    "content": "Winner of InovAtiva Brasil, selected for GITEX Dubai 2025, winner of the VISA Acceleration Program with an immersion in Silicon Valley, and a GPTW seal with a maximum score."
+    "achievements": [
+      {
+        "icon": "Trophy",
+        "title": "InovAtiva Brasil Winner",
+        "description": "Recognized as one of the most innovative startups in Brazil's largest acceleration program."
+      },
+      {
+        "icon": "Plane",
+        "title": "Selected for GITEX Dubai 2025",
+        "description": "Chosen to represent Brazilian innovation at one of the world's largest technology events."
+      },
+      {
+        "icon": "CreditCard",
+        "title": "VISA Acceleration Program",
+        "description": "Winner of the program, including a business immersion experience in Silicon Valley."
+      },
+      {
+        "icon": "Star",
+        "title": "Great Place to Work (GPTW)",
+        "description": "Achieved the GPTW seal with a maximum score, reflecting a commitment to a positive work environment."
+      }
+    ]
   },
   "professional_experience": {
     "title": "Professional Experience",
