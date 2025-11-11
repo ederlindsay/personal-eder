@@ -1,31 +1,36 @@
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Trophy, Plane, CreditCard, Star, Icon as LucideIcon } from 'lucide-react';
-
-const icons: { [key: string]: LucideIcon } = {
-  Trophy,
-  Plane,
-  CreditCard,
-  Star,
-};
+import { Card, CardContent } from '@/components/ui/card';
+import { Trophy, Lightbulb, Users, Handshake, Icon } from 'lucide-react'; // Assuming Icon is exported from lucide-react
+import { useTranslation } from 'react-i18next';
 
 interface AchievementCardProps {
   icon: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
 }
 
-const AchievementCard: React.FC<AchievementCardProps> = ({ icon, title, description }) => {
-  const Icon = icons[icon] || Star;
+const icons: { [key: string]: Icon } = { // Changed LucideIcon to Icon
+  Trophy,
+  Lightbulb,
+  Users,
+  Handshake,
+};
+
+const AchievementCard: React.FC<AchievementCardProps> = ({ icon, titleKey, descriptionKey }) => {
+  const { t } = useTranslation();
+  const IconComponent = icons[icon];
+
+  if (!IconComponent) {
+    console.warn(`Icon "${icon}" not found.`);
+    return null;
+  }
 
   return (
-    <Card className="bg-background/50">
-      <CardHeader className="flex flex-row items-center gap-4">
-        <Icon className="h-8 w-8 text-primary" />
-        <CardTitle>{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
+    <Card className="flex flex-col items-center text-center p-6 bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <CardContent className="p-0 flex flex-col items-center">
+        <IconComponent className="h-12 w-12 text-primary mb-4" />
+        <h3 className="text-xl font-semibold mb-2">{t(titleKey)}</h3>
+        <p className="text-muted-foreground">{t(descriptionKey)}</p>
       </CardContent>
     </Card>
   );
