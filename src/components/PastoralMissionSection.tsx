@@ -15,7 +15,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
       value: 'pastor',
       label: t('pastoral_mission.pastor.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-pastor" imagePosition="left">
+        <AccordionContentItem imageSrc="/images/pastor-escritor-mentor.png" imagePosition="left">
           <p>{t('pastoral_mission.pastor.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
       value: 'book',
       label: t('pastoral_mission.book.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-book" imagePosition="right">
+        <AccordionContentItem imageSrc="/images/livro-desista-do-controle.png" imagePosition="right">
           <p>{t('pastoral_mission.book.content')}</p>
         </AccordionContentItem>
       ),
@@ -33,7 +33,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
       value: 'social_projects',
       label: t('pastoral_mission.social_projects.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-social" imagePosition="left">
+        <AccordionContentItem imageSrc="/images/projetos-sociais.png" imagePosition="left">
           <p>{t('pastoral_mission.social_projects.content')}</p>
         </AccordionContentItem>
       ),
