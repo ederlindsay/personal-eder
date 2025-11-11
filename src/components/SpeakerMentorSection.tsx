@@ -21,7 +21,7 @@ const SpeakerMentorSection: React.FC<SpeakerMentorSectionProps> = ({ id }) => {
           <p className="text-lg text-muted-foreground text-left">{t('speaker_mentor.content')}</p>
           <div className="relative w-full h-64 rounded-lg overflow-hidden">
             <img
-              src="https://picsum.photos/seed/eder-speaker/800/600"
+              src="images/palestrante-e-mentor.png"
               alt={t('speaker_mentor.title')}
               className="w-full h-full object-cover"
             />
