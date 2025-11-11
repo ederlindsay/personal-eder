@@ -26,10 +26,10 @@ const PersonalPhilosophySection: React.FC<PersonalPhilosophySectionProps> = ({ i
             />
           </div>
           <div className="text-left">
-            <blockquote className="mt-6 border-l-4 pl-6 italic text-xl md:text-2xl font-semibold">
-              &ldquo;{t('personal_philosophy.quote')}&rdquo;
-            </blockquote>
-            <p className="text-lg text-muted-foreground mt-4">{t('personal_philosophy.explanation')}</p>
+            <p className="italic text-xl md:text-2xl font-semibold mb-4">
+                &ldquo;{t('personal_philosophy.quote')}&rdquo;
+            </p>
+            <p className="text-lg text-muted-foreground">{t('personal_philosophy.explanation')}</p>
           </div>
         </div>
       </div>
