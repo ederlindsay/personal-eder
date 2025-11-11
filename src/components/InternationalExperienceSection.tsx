@@ -21,7 +21,7 @@ const InternationalExperienceSection: React.FC<InternationalExperienceSectionPro
           <p className="text-lg text-muted-foreground text-left">{t('international_experience.content')}</p>
           <div className="relative w-full h-64 rounded-lg overflow-hidden">
             <img
-              src="https://picsum.photos/seed/eder-international/800/600"
+              src="/images/vale-do-silicio.jpg"
               alt={t('international_experience.title')}
               className="w-full h-full object-cover"
             />
