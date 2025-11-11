@@ -15,7 +15,7 @@ const PastoralMissionSection: React.FC<PastoralMissionSectionProps> = ({ id }) =
       value: 'pastor',
       label: t('pastoral_mission.pastor.title'),
       content: (
-        <AccordionContentItem imageSrc="images/pastor-escritor-mentor.png" imagePosition="left">
+        <AccordionContentItem imageSrc="images/palestrante-e-mentor.png" imagePosition="left">
           <p>{t('pastoral_mission.pastor.content')}</p>
         </AccordionContentItem>
       ),
