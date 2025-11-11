@@ -15,7 +15,7 @@ const OriginsPurposeSection: React.FC<OriginsPurposeSectionProps> = ({ id }) => 
       value: 'humble_beginnings',
       label: t('origins_purpose.humble_beginnings.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-origins-1" imagePosition="left">
+        <AccordionContentItem imageSrc="/images/origens-humildes.png" imagePosition="left">
           <p>{t('origins_purpose.humble_beginnings.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const OriginsPurposeSection: React.FC<OriginsPurposeSectionProps> = ({ id }) => 
       value: 'early_dreams',
       label: t('origins_purpose.early_dreams.title'),
       content: (
-        <AccordionContentItem imageSeed="eder-dreams-1" imagePosition="right">
+        <AccordionContentItem imageSrc="/images/sonhos-empreendedores.png" imagePosition="right">
           <p>{t('origins_purpose.early_dreams.content')}</p>
         </AccordionContentItem>
       ),
