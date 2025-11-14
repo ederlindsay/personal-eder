@@ -15,7 +15,7 @@ const FaithResilienceSection: React.FC<FaithResilienceSectionProps> = ({ id }) =
       value: 'mission',
       label: t('faith_resilience.mission.title'),
       content: (
-        <AccordionContentItem imageSrc="images/missao.png" imagePosition="left">
+        <AccordionContentItem imageSrc="images/Missao.png" imagePosition="left">
           <p>{t('faith_resilience.mission.content')}</p>
         </AccordionContentItem>
       ),
@@ -24,7 +24,7 @@ const FaithResilienceSection: React.FC<FaithResilienceSectionProps> = ({ id }) =
       value: 'chaos',
       label: t('faith_resilience.chaos.title'),
       content: (
-        <AccordionContentItem imageSrc="images/o-caos.png" imagePosition="right">
+        <AccordionContentItem imageSrc="images/O Caos.png" imagePosition="right">
           <p>{t('faith_resilience.chaos.content_p1')}</p>
           <p>{t('faith_resilience.chaos.content_p2')}</p>
           <p>{t('faith_resilience.chaos.content_p3')}</p>

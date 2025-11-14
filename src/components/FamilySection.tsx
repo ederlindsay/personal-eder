@@ -15,7 +15,7 @@ const FamilySection: React.FC<FamilySectionProps> = ({ id }) => {
       value: 'close_family',
       label: t('family.close_family.title'),
       content: (
-        <AccordionContentItem imageSrc="images/familia.png" imagePosition="left">
+        <AccordionContentItem imageSrc="images/Familia.png" imagePosition="left">
           <p>{t('family.close_family.content')}</p>
         </AccordionContentItem>
       ),
