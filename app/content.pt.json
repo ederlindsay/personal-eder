@@ -1,0 +1,172 @@
+{
+  "header": {
+    "title": "Eder Balbino",
+    "home": "Início",
+    "biography": "Biografia",
+    "career": "Carreira",
+    "profile": "Perfil",
+    "skills": "Habilidades"
+  },
+  "common": {
+    "learn_more": "Saiba Mais"
+  },
+  "hero": {
+    "title": "Quem é Eder Balbino",
+    "subtitle": "Trajetória pessoal e profissional."
+  },
+  "origins_purpose": {
+    "title": "Origens e Propósito",
+    "intro_short": "Informações sobre as origens de Eder e acontecimentos da infância.",
+    "humble_beginnings": {
+      "title": "Origens Humildes",
+      "summary": "Nascido em Belo Horizonte, Eder aprendeu sobre fé, integridade e generosidade com os pais.",
+      "content": "Eder nasceu em um lar simples em Belo Horizonte, o quinto filho de Pedro Balbino e Maria José. Seu pai foi pastor e fundador de uma igreja batista. A infância e a juventude foram cercadas de música, amizade e espiritualidade; nesse período, ele também tocava bateria e gostava de rock’n roll."
+    },
+    "early_dreams": {
+      "title": "Sonhos Empreendedores",
+      "summary": "Os primeiros interesses por empresas e uma história da infância.",
+      "content": "Desde os sete anos, Eder demonstrava interesse por empresas. Juntava moedas pensando em ter seu próprio negócio, mas gastou tudo com picolés da Dona Teófila quando amigos foram visitá-lo — uma lembrança sobre investimento e generosidade."
+    }
+  },
+  "family": {
+    "title": "Família",
+    "intro_short": "Registros sobre a esposa, os filhos, os pais e os irmãos de Eder.",
+    "close_family": {
+      "title": "Família",
+      "summary": "Heloísa Cristina e os quatro filhos do casal.",
+      "content": "Eder é casado com Heloísa Cristina e pai de quatro filhos: Emily, Sofia, Ravi e Nicole."
+    },
+    "extended_family": {
+      "title": "Família estendida",
+      "summary": "Informações sobre os pais e irmãos de Eder.",
+      "content": "Eder é o caçula entre os irmãos Quesia, Dan, Júnia e Sara, com quem mantém uma relação de amor e amizade."
+    }
+  },
+  "faith_resilience": {
+    "title": "Fé e Resiliência",
+    "intro_short": "A jornada de fé, o ministério pastoral e experiências de adversidade.",
+    "mission": {
+      "title": "Missão",
+      "content": "Eder é ligado à tradição cristã reformada e lidera o departamento de missões da Igreja Missão VIDE, responsável pelo apoio a cerca de 20 famílias missionárias em países como Moçambique, Angola, Tunísia, Espanha, França e Brasil."
+    },
+    "chaos": {
+      "title": "O Caos",
+      "content_p1": "Em 2023, Eder foi incluído em uma investigação relacionada à análise de dados eleitorais realizada pela Gaio. Em fevereiro de 2024, uma ordem de busca e apreensão foi cumprida em sua residência.",
+      "content_p2": "O período de apuração durou cerca de dez meses e teve repercussão na imprensa. Ao final, Eder não foi indiciado e posteriormente foi convocado como testemunha no processo.",
+      "content_p3": "Na dimensão pessoal e religiosa, a experiência trouxe reflexões sobre sofrimento, limites e confiança na soberania de Deus."
+    }
+  },
+  "education_learning": {
+    "title": "Formação e Aprendizado",
+    "intro_short": "Informações sobre a formação acadêmica e teológica de Eder e o estudo da língua inglesa.",
+    "academic": {
+      "title": "Formação Acadêmica",
+      "content": "Eder é graduado em Estatística e pós-graduado em Gestão Estratégica da Informação pela UFMG."
+    },
+    "theology": {
+      "title": "Teologia",
+      "content": "Também é graduado em Teologia pela Sociedade de Estudos Bíblicos Interdisciplinares (SEBI), em Brasília."
+    },
+    "english": {
+      "title": "Desafio do Inglês",
+      "content": "Durante três meses, Eder estudou inglês por cerca de 12 horas diárias e concluiu o curso da English Live, antiga English Town. Nesse período, alcançou o primeiro lugar no ranking de atividades da plataforma."
+    }
+  },
+  "pastoral_mission": {
+    "title": "Vida Pastoral e Missão",
+    "intro_short": "A atuação de Eder como pastor, escritor e mentor, além do envolvimento em projetos sociais na África.",
+    "pastor": {
+      "title": "Pastor, Escritor e Mentor",
+      "content": "Atuo como pastor, escritor e mentor em atividades relacionadas à fé cristã."
+    },
+    "book": {
+      "title": "Livro 'Desista do Controle'",
+      "content": "Eder é autor do livro “Desista do Controle”, uma obra sobre rendição e dependência do Senhor."
+    },
+    "social_projects": {
+      "title": "Projetos Sociais",
+      "content": "Eder também apoia projetos sociais na África, especialmente em Moçambique, por meio da Missão NASCE, que recebe parte dos lucros da Gaio para atender famílias e crianças em situação de vulnerabilidade."
+    }
+  },
+  "career_entrepreneurship": {
+    "title": "Carreira e Empreendedorismo",
+    "intro_short": "Informações sobre empresas, projetos e funções exercidas ao longo de mais de 25 anos.",
+    "companies": {
+      "title": "Empresas Fundadas",
+      "content": "Ao longo de mais de 25 anos, Eder participou da fundação de empresas como Loja Rentável, i-Varejo, Lince — adquirida pelo Grupo Algar em 2014 —, AioNow, Beelong e Gaio DataOS."
+    },
+    "current_roles": {
+      "title": "Atuação Atual",
+      "content": "Eder é fundador e CEO da Gaio, empresa responsável pelo Gaio DataOS. Atualmente, não integra a Beelong."
+    }
+  },
+  "recognitions_achievements": {
+    "title": "Programas e Reconhecimentos",
+    "intro_short": "Registros de programas, eventos e certificações relacionados à trajetória profissional.",
+    "achievements": [
+      {
+        "icon": "Trophy",
+        "title": "InovAtiva Brasil",
+        "description": "Participação no programa, com classificação em primeiro lugar."
+      },
+      {
+        "icon": "Plane",
+        "title": "GITEX Dubai 2025",
+        "description": "Participação no evento por meio de programa de internacionalização."
+      },
+      {
+        "icon": "CreditCard",
+        "title": "Programa da Visa",
+        "description": "Participação no programa, com classificação em primeiro lugar e uma atividade no Vale do Silício."
+      },
+      {
+        "icon": "Star",
+        "title": "Selo Great Place to Work (GPTW)",
+        "description": "Certificação obtida pela Gaio a partir da avaliação dos colaboradores."
+      }
+    ]
+  },
+  "professional_experience": {
+    "title": "Experiência Profissional",
+    "intro_short": "Atuação em projetos de inteligência de dados e atividades de docência.",
+    "consulting": {
+      "title": "Consultoria e Projetos",
+      "content": "Eder atuou em projetos de inteligência de dados em instituições como TCU, TCE-CE, Secretarias de Fazenda, Ministério do Planejamento, BNB, Embraer, Oi, Algar Telecom e Martins Atacadista."
+    },
+    "teaching": {
+      "title": "Docência",
+      "content": "Eder também atuou como professor de pós-graduação em Ciência de Dados na PUC Minas e como professor na Jocum (YWAM)."
+    }
+  },
+  "speaker_mentor": {
+    "title": "Palestrante e Mentor",
+    "intro_short": "A experiência de Eder como palestrante em eventos internacionais e mentor de empreendedores e jovens.",
+    "content": "Eder participou como palestrante de eventos da Gartner e da Informa, com temas relacionados a fé, tecnologia e trabalho. Também participou de atividades de mentoria com empreendedores e jovens em início de carreira."
+  },
+  "leadership_values": {
+    "title": "Liderança e Valores",
+    "intro_short": "Reflexões sobre responsabilidade, cuidado e convivência na liderança.",
+    "content": "Eder procura exercer a liderança com responsabilidade e coerência entre discurso e prática. A fé cristã orienta essa forma de trabalhar e conviver."
+  },
+  "international_experience": {
+    "title": "Experiência Internacional",
+    "intro_short": "Palestras, congressos, visitas e aprendizados em diferentes países e cidades.",
+    "content": "Eder participou de atividades profissionais e culturais em cidades dos Estados Unidos, Europa, América Latina, Oriente Médio e Ásia, levando e buscando conhecimento em cada contexto."
+  },
+  "technical_skills": {
+    "title": "Competências Técnicas",
+    "intro_short": "Principais habilidades e ferramentas utilizadas por Eder em inteligência de dados, IA e desenvolvimento.",
+    "skills": "Gaio DataOS, SAS, RapidMiner, KNIME, IBM Analytics, Watson, Tableau, QlikView, Python, SQL, Oracle, MySQL, SQL Server, Teradata, MemSQL, Docker, Linux, Windows, macOS, CRM Tools, MS Office, PHP"
+  },
+  "relational_characteristics": {
+    "title": "Características Relacionais",
+    "intro_short": "Características relacionadas à forma de Eder interagir e construir relacionamentos.",
+    "characteristics": "Inovador, Generoso, Domínio próprio, Prazer em ensinar, Paciência, Intensidade, Amor"
+  },
+  "personal_philosophy": {
+    "title": "Filosofia Pessoal",
+    "intro_short": "Uma reflexão pessoal sobre paz interior, convicção e fé.",
+    "quote": "“Há paz interior mesmo em meio à guerra exterior.”",
+    "explanation": "Essa frase resume a busca por serenidade em períodos difíceis e a confiança na soberania de Deus."
+  }
+}
