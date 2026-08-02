@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import LanguageController from "./LanguageController";
 
 const links = [
   ["/carreira", "Carreira"],
@@ -22,7 +23,10 @@ export default function GlobalNav() {
         <Link className={pathname === href || (pathname === "/o-caos" && href === "/vida-espiritual") ? "active" : ""} href={href} key={href} onClick={() => setOpen(false)}>{label}</Link>
       )}
     </nav>
-    <Link className="header-contact" href="/#contato" onClick={() => setOpen(false)}>Contato</Link>
+    <div className="header-actions">
+      <LanguageController/>
+      <Link className="header-contact" href="/#contato" onClick={() => setOpen(false)}>Contato</Link>
+    </div>
     <button className="menu-toggle" aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
       <i/><i/>
     </button>
