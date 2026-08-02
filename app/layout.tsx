@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import GlobalNav from "./GlobalNav";
-import LanguageController from "./LanguageController";
 import MotionController from "./MotionController";
 
 export const metadata: Metadata = {
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="pt-BR"><body>
-    <GlobalNav/><LanguageController/><MotionController/>
+    <GlobalNav/><MotionController/>
     {children}
     <footer><Link className="brand personal-brand" href="/"><img src="/images/brand/eder-balbino-mark.png" alt="Eder Balbino"/><span>Eder Balbino</span></Link><p>Fé, tecnologia e propósito.</p><div><a href="https://www.linkedin.com/in/ederbalbino/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://wa.me/5534992942427" target="_blank" rel="noreferrer">WhatsApp ↗</a></div><small>© 2026 Eder Balbino</small></footer>
   </body></html>;
