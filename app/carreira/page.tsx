@@ -81,16 +81,12 @@ const chapters: {period:string; title:string; text:string; details?:string[]; ma
   },
   {
     period:"Atuação atual",
-    title:"Gaio, Weli e uma possível colaboração social",
-    text:"Atualmente, Eder é CEO da Gaio e cofundador da Weli. A Gaio trabalha com plataformas de dados, inteligência artificial e agentes autônomos; a Weli integra saúde, bem-estar, gestão e proteção legal. Também existem conversas sobre uma possível colaboração tecnológica com o ChildFund Brasil.",
-    details:[
-      "O médico Vinícius Paulino apresentou a Eder uma necessidade que poderia ser tratada com IA. Em um mês, foram desenvolvidos quatro sistemas para testar a proposta.",
-      "Os dois criaram a Weli — Well-Being Intelligence. Em cerca de cinco meses, a empresa chegou a aproximadamente 15 clientes e receita recorrente próxima de R$ 10 mil. O projeto combina saúde, bem-estar, gestão e proteção legal."
-    ],
+    title:"Gaio, Weli e a transformação do ChildFund",
+    text:"Atualmente, Eder é CEO da Gaio e cofundador da Weli. A Gaio trabalha com plataformas de dados, inteligência artificial e agentes autônomos; a Weli integra saúde, bem-estar, gestão e proteção legal. A Gaio está realizando a transformação tecnológica do ChildFund Brasil.",
     marks:[
       {image:"/images/brand/normalized/gaio.png",name:"Gaio DataOS",caption:"Atuação como CEO",format:"standard"},
       {image:"/images/brand/normalized/weli.png",name:"Weli",caption:"Atuação como cofundador",format:"wide"},
-      {image:"/images/brand/normalized/childfund-brasil.png",name:"ChildFund Brasil",caption:"Possível colaboração em estudo",format:"wide"},
+      {image:"/images/brand/normalized/childfund-brasil.png",name:"ChildFund Brasil",caption:"Transformação tecnológica em andamento",format:"wide"},
     ]
   },
 ];
