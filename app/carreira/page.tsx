@@ -15,10 +15,8 @@ const chapters: {period:string; title:string; text:string; details?:string[]; ma
     title:"Da Estatística à inteligência de dados",
     text:"O interesse por matemática, empresas e computadores começou ainda na infância. Aos 15 anos, Eder criou seu primeiro site profissional; mais tarde, a formação em Estatística e Gestão Estratégica da Informação na UFMG abriu caminho para atividades de pesquisa, análise e tecnologia.",
     details:[
-      "Na graduação, cursou Inteligência Artificial em 2000 e disciplinas de Marketing, conectando matemática, tecnologia e comportamento humano — uma combinação que permanece central em seu trabalho.",
-      "A experiência profissional passou por Vox Populi, Oi, Algar Telecom e Martins, onde coordenou uma equipe de inteligência competitiva.",
-      "Eder e Heloísa mudaram-se para Uberlândia com oito meses de casamento. Ele trabalhou na Algar Telecom e, depois de um ano, seguiu para o Martins.",
-      "No Martins, passou a coordenar uma equipe de análise de dados e trabalhou com a plataforma SAS. A equipe chegou a reunir cerca de 12 pessoas."
+      "Na UFMG, estudou Estatística, Gestão Estratégica da Informação e Inteligência Artificial.",
+      "Atuou em pesquisa e inteligência de dados na Vox Populi, Oi, Algar Telecom e Martins, incluindo projetos de análise competitiva com SAS."
     ],
     marks:[
       {image:"/images/brand/normalized/ufmg.png",name:"UFMG",caption:"Graduação e pós-graduação",format:"wide"},
@@ -31,7 +29,7 @@ const chapters: {period:string; title:string; text:string; details?:string[]; ma
   {
     period:"Consultoria, setor público e docência",
     title:"Dados aplicados a diferentes instituições",
-    text:"Os anos seguintes reuniram consultorias para empresas, órgãos públicos e instituições financeiras. Os trabalhos envolveram análise de dados, prevenção a fraudes e formação de profissionais, incluindo um projeto no TCU que apontou aproximadamente R$ 50 bilhões em possíveis fraudes na Previdência Social.",
+    text:"Os anos seguintes reuniram projetos de análise de dados e prevenção a fraudes para empresas e órgãos públicos, além da formação de profissionais em Ciência de Dados.",
     details:[
       "A trajetória incluiu Ministério do Planejamento, Secretarias de Fazenda, Procuradoria, Tribunais de Contas, Banpará e Banco do Nordeste, além da docência em Ciência de Dados na PUC Minas e na JOCUM."
     ],
@@ -47,11 +45,10 @@ const chapters: {period:string; title:string; text:string; details?:string[]; ma
   {
     period:"Empreendedorismo",
     title:"Projetos construídos em diferentes momentos",
-    text:"Ao longo da carreira, Eder participou da fundação de negócios voltados a varejo, atendimento, análise de dados e software. Alguns foram encerrados, outros mudaram de direção e a Lince foi adquirida pelo Grupo Algar. O conjunto registra aprendizados, tentativas, continuidade e mudanças de contexto.",
+    text:"Eder fundou e participou de empresas voltadas a varejo, atendimento, análise de dados e software. Entre elas está a Lince, adquirida pelo Grupo Algar.",
     details:[
-      "A Loja Rentável foi criada para automatizar cotações entre atacadistas e varejistas. O projeto recebeu recursos de cinco investidores, mas foi encerrado oito meses depois, com a devolução de aproximadamente 85% do capital.",
-      "Eder fundou a Lince, empresa de análise de dados parceira da RapidMiner na Alemanha, com projetos em SAS para Martins, Embraer e outras organizações.",
-      "Após aproximadamente um ano de negociação, o Grupo Algar adquiriu a Lince. Os colaboradores foram incorporados à Algar Tech e Eder passou a atuar como executivo do grupo, inclusive em trabalhos com IBM Watson."
+      "A Loja Rentável foi criada para automatizar cotações entre atacadistas e varejistas.",
+      "A Lince desenvolveu projetos de análise de dados para empresas como Martins e Embraer. Após a aquisição pelo Grupo Algar, Eder atuou como executivo do grupo, inclusive em iniciativas com IBM Watson."
     ],
     marks:[
       {image:"/images/brand/normalized/loja-rentavel.png",name:"Loja Rentável",caption:"Automação de cotações",format:"wide"},
@@ -66,9 +63,9 @@ const chapters: {period:string; title:string; text:string; details?:string[]; ma
   {
     period:"Programas, eventos e ambiente de trabalho",
     title:"Participações que ampliaram o repertório",
-    text:"Programas de aceleração, eventos e certificações fizeram parte da trajetória das empresas. Essas experiências incluíram atividades no Vale do Silício e em Dubai, palestras em encontros profissionais e a avaliação do ambiente de trabalho da Gaio.",
+    text:"Participou de programas de aceleração, encontros profissionais e iniciativas de internacionalização, com atividades no Vale do Silício e em Dubai.",
     details:[
-      "A empresa participou dos programas InovAtiva, Visa e SEBRAE, com atividades no Vale do Silício e em Dubai. Em 2018, Eder cursou Product Design em Stanford. A Gaio também obteve a certificação GPTW."
+      "Em 2018, Eder cursou Product Design em Stanford. A Gaio obteve a certificação Great Place to Work."
     ],
     marks:[
       {image:"/images/brand/normalized/visa.png",name:"Visa",caption:"Programa de aceleração",format:"standard"},
@@ -82,10 +79,10 @@ const chapters: {period:string; title:string; text:string; details?:string[]; ma
   {
     period:"Atuação atual",
     title:"Gaio, Weli e a transformação do ChildFund",
-    text:"Atualmente, Eder é CEO da Gaio e cofundador da Weli. A Gaio trabalha com plataformas de dados, inteligência artificial e agentes autônomos; a Weli integra saúde, bem-estar, gestão e proteção legal. A Gaio está realizando a transformação tecnológica do ChildFund Brasil.",
+    text:"Eder atua em projetos de dados e inteligência artificial na Gaio e é cofundador da Weli, voltada à saúde corporativa. A Gaio realiza a transformação tecnológica do ChildFund Brasil.",
     marks:[
-      {image:"/images/brand/normalized/gaio.png",name:"Gaio DataOS",caption:"Atuação como CEO",format:"standard"},
-      {image:"/images/brand/normalized/weli.png",name:"Weli",caption:"Atuação como cofundador",format:"wide"},
+      {image:"/images/brand/normalized/gaio.png",name:"Gaio DataOS",caption:"Dados e inteligência artificial",format:"standard"},
+      {image:"/images/brand/normalized/weli.png",name:"Weli",caption:"Saúde corporativa",format:"wide"},
       {image:"/images/brand/normalized/childfund-brasil.png",name:"ChildFund Brasil",caption:"Transformação tecnológica em andamento",format:"wide"},
     ]
   },
