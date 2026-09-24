@@ -30,10 +30,10 @@ export default function OCaos(){
     <section className="page-hero chaos-page-hero">
       <span>03 — Espiritual</span>
       <h1>O Caos — a história completa</h1>
-      <p>Eder apresenta este relato não como uma história de força pessoal, mas como o registro de alguém comum que atravessou uma experiência assustadora e encontrou esperança em Jesus Cristo.</p>
+      <p>Um relato pessoal sobre a investigação de 2024 e a esperança encontrada em Jesus Cristo.</p>
     </section>
     <section className="chaos-complete">
-      <div className="chaos-intro"><span>Da dor ao refúgio secreto</span><h2>O Caos — a história completa</h2><p>Eder apresenta este relato não como uma história de força pessoal, mas como o registro de alguém comum que atravessou uma experiência assustadora e encontrou esperança em Jesus Cristo.</p></div>
+      <div className="chaos-intro"><span>Da dor ao refúgio secreto</span><h2>Da investigação à esperança</h2><p>O relato reúne o contexto dos acontecimentos e as reflexões espirituais nascidas daquele período.</p></div>
       <div className="chaos-chapters">{chaosChapters.map(chapter=><article key={chapter.n}><span>{chapter.n}</span><h3>{chapter.title}</h3><p>{chapter.text}</p></article>)}</div>
       <div className="chaos-context">
         <article><span>Pessoas e instituições citadas</span><h3>O ambiente público da investigação</h3><p>O relato menciona o ex-presidente Jair Bolsonaro, o ministro do STF Alexandre de Moraes, o Instituto Voto Legal, o Partido Liberal, a Polícia Federal, a Procuradoria-Geral da República e a cobertura da imprensa nacional e internacional.</p></article>
