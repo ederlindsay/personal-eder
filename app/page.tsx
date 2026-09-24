@@ -17,13 +17,13 @@ export default function Home() {
     <section className="foundations" id="fundamentos">
       <div className="foundations-intro"><span>O que sustenta a trajetória</span><h2>Raízes simples.<br/>Convicções profundas.</h2><p>Eder nasceu em Belo Horizonte, em uma família cristã de recursos limitados. Filho de Pedro Balbino e Maria José, cresceu entre fé, música, generosidade e trabalho — referências que continuam presentes em sua forma de liderar, empreender e servir.</p></div>
       <div className="foundations-grid">
-        <figure><img src="/images/familia-proxima.jpg" alt="Eder com Heloísa e seus quatro filhos"/><figcaption><span>Família</span><h3>O lugar de pertencimento.</h3><p>É casado com Heloísa Cristina e pai de Emily, Sofia, Ravi e Nicole. A família não aparece como um capítulo paralelo: é parte da leitura de todas as escolhas.</p></figcaption></figure>
-        <figure><img src="/images/familia-extendida.jpeg" alt="Família de origem de Eder Balbino"/><figcaption><span>Origens</span><h3>Uma história recebida.</h3><p>Caçula entre Quesia, Dan, Júnia e Sara, aprendeu cedo que trajetória não é construção solitária. Ela nasce de vínculos, limites, providência e responsabilidade.</p></figcaption></figure>
+        <figure><img src="/images/familia-proxima.jpg" alt="Eder com Heloísa e seus quatro filhos"/><figcaption><span>Família</span><h3>O lugar de pertencimento.</h3><p>Eder é casado com Heloísa Cristina e pai de Emily, Sofia, Ravi e Nicole. A vida familiar ocupa um lugar central em sua trajetória.</p></figcaption></figure>
+        <figure><img src="/images/familia-extendida.jpeg" alt="Família de origem de Eder Balbino"/><figcaption><span>Origens</span><h3>Uma história recebida.</h3><p>Caçula de cinco irmãos, cresceu em uma casa marcada pela fé, pela música, pelo trabalho e pela convivência em família.</p></figcaption></figure>
       </div>
     </section>
     <HorizontalJourney />
     <section className="theme-hub" id="temas">
-      <div className="hub-intro"><span>Navegação por tema</span><h2>Quatro dimensões.<br />Uma mesma vida.</h2><p>Os conteúdos estão organizados pelo contexto em que ganham significado — trabalho, mundo, fé e serviço.</p></div>
+      <div className="hub-intro"><span>Navegação por tema</span><h2>Quatro dimensões.<br />Uma mesma vida.</h2><p>Explore a carreira, as experiências internacionais, a fé e os projetos sociais.</p></div>
       <div className="theme-list">{themes.map((theme)=><a href={theme.href} key={theme.href}><span>{theme.n}</span><div><h3>{theme.title}</h3><p>{theme.text}</p></div><img src={theme.image} alt="" /><b>↗</b></a>)}</div>
     </section>
     <section className="contact" id="contato"><p>Contato</p><h2>Para perguntas, conversas<br />ou troca de informações.</h2><a href="https://wa.me/5534992942427" target="_blank" rel="noreferrer">Entrar em contato <span>↗</span></a></section>
