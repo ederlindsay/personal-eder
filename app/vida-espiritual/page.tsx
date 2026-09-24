@@ -6,7 +6,7 @@ export default function Espiritual(){
     <SpiritualTabs/>
     <section className="spiritual-chronicle" id="trajetoria-espiritual">
       <article><span>Das origens ao ministério</span><h2>Teologia reformada, ministério e missões</h2><p>Filho de pastor batista, Eder cresceu em uma família cristã. Na SEBI, aprofundou a formação teológica e se aproximou da tradição reformada, com ênfase na soberania de Deus, na centralidade das Escrituras e na graça. Desses estudos nasceu o livro Desista do Controle.</p><p>Como pastor de missões da Missão VIDE, lidera o departamento responsável pelo apoio a aproximadamente 20 famílias missionárias em vários países.</p></article>
-      <article><span>Após 2024</span><h2>UpsideDown</h2><p>Eder preparou uma pregação sobre superação, perseverança e confiança em Jesus. A mensagem não trata de vencer pela força pessoal, mas de confiar em Cristo quando as possibilidades humanas desaparecem.</p><p>UpsideDown foi apresentada no Brasil e nos Estados Unidos e permanece entre as mensagens que ele considera mais importantes.</p></article>
+      <article><span>Após 2024</span><h2>UpsideDown</h2><p>UpsideDown é uma mensagem sobre perseverança e confiança em Jesus Cristo quando as possibilidades humanas parecem desaparecer.</p><p>A mensagem foi apresentada no Brasil e nos Estados Unidos.</p></article>
     </section>
     <section className="chaos-callout">
       <div className="chaos-intro"><span>Da dor ao refúgio secreto</span><h2>O Caos — a história completa</h2><p>Eder apresenta este relato não como uma história de força pessoal, mas como o registro de alguém comum que atravessou uma experiência assustadora e encontrou esperança em Jesus Cristo.</p></div>
