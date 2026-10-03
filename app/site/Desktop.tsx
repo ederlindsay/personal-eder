@@ -111,9 +111,9 @@ export default function Desktop({ active }: { active: boolean }) {
     if (!active || !canvasRef.current) return;
     if (!engRef.current) {
       engRef.current = makeEngine(canvasRef.current, {
-        particles: 2100,
-        focusX: (k) => (CHAPTERS[k].img ? 0.64 : 0.7),
-        focusScale: 0.25,
+        particles: 3200,
+        focusX: (k) => (CHAPTERS[k].img ? 0.7 : 0.72),
+        focusScale: 0.24,
         repel: true,
       });
     }
@@ -227,7 +227,7 @@ export default function Desktop({ active }: { active: boolean }) {
 
           {ch && (
             <>
-              <div className="txt" style={{ maxWidth: ch.img ? 600 : 660 }}>
+              <div className="txt" style={{ maxWidth: 540 }}>
                 <p className="mono fd">{block.section === "historia" ? `Capítulo ${ROMAN[chIdx]} · ${ch.label}` : ch.label}</p>
                 <figure className="epi fd" style={{ animationDelay: "100ms" }}>
                   <blockquote className="serif">{ch.epi}</blockquote>
@@ -253,7 +253,7 @@ export default function Desktop({ active }: { active: boolean }) {
                 </button>
               </div>
               {ch.img && (
-                <div className="platepos" style={{ width: ch.book ? 260 : ch.wide ? 360 : 290 }}>
+                <div className="platepos" style={{ width: ch.book ? 180 : ch.wide ? 270 : 200 }}>
                   <div className="tilt" ref={tiltRef}>
                     <figure className="card" style={{ animationDelay: "260ms" }}>
                       <div className={`plate${ch.color ? " color" : ""}`} style={{ aspectRatio: ch.book ? "2 / 3" : ch.wide ? "4 / 3" : "4 / 5" }}>
