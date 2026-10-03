@@ -5,7 +5,7 @@ import Desktop from "./Desktop";
 import Mobile from "./Mobile";
 
 // Same breakpoint as `.desk` / `.mob` in globals.css.
-const DESKTOP_QUERY = "(min-width: 900px) and (min-height: 600px)";
+const DESKTOP_QUERY = "(min-width: 1024px) and (min-height: 640px)";
 
 export default function Site() {
   const [desktop, setDesktop] = useState<boolean | null>(null);

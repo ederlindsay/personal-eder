@@ -3,20 +3,20 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eder-balbino-personal.ederlindsay.chatgpt.site"),
-  title: { default: "Eder Balbino — Um atlas da transformação", template: "%s — Eder Balbino" },
-  description: "Sete capítulos de uma história real de transformação: começo, construção, casulo, rendição, transformação, multiplicação e identidade.",
+  title: { default: "Eder Balbino — Ninguém se transforma de uma vez", template: "%s — Eder Balbino" },
+  description: "Estatístico, empreendedor, pastor e escritor. Uma história real de transformação, em capítulos curtos.",
   icons: { icon: "/images/brand/eder-balbino-mark.png", shortcut: "/images/brand/eder-balbino-mark.png" },
   openGraph: {
-    title: "Eder Balbino — Um atlas da transformação",
-    description: "Ninguém se transforma de uma vez. Sete capítulos de uma história real.",
+    title: "Eder Balbino — Ninguém se transforma de uma vez",
+    description: "Uma história real de transformação, em capítulos curtos.",
     images: ["/og-production.png"],
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eder Balbino — Um atlas da transformação",
-    description: "Ninguém se transforma de uma vez. Sete capítulos de uma história real.",
+    title: "Eder Balbino — Ninguém se transforma de uma vez",
+    description: "Uma história real de transformação, em capítulos curtos.",
     images: ["/og-production.png"],
   },
 };

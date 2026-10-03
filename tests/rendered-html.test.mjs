@@ -23,13 +23,15 @@ function render(path = "/") {
   );
 }
 
-test("home presents the atlas with all seven chapters", async () => {
+test("home presents the portrait, menu and all seven chapters", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Um atlas da transformação/);
+  assert.match(html, /Ninguém se transforma de uma vez/);
+  assert.match(html, /eder-desenho\.webp/);
+  assert.doesNotMatch(html, /[Aa]tlas/);
   for (const label of ["O começo", "A construção", "O casulo", "A rendição", "A transformação", "O que se multiplica", "Quem sou eu"]) {
     assert.match(html, new RegExp(`>${label}<`), label);
   }

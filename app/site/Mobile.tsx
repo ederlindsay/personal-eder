@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState, type TouchEvent } from "react";
-import { CHAPTERS, CHAPTER_FILTER, DETAILS, PHOTOS, ROMAN, WHATSAPP, photosFor } from "./content";
-import { K, makeEngine, type Engine } from "./engine";
+import { useEffect, useState } from "react";
+import {
+  BLOCKS, CHAPTERS, CHAPTER_FILTER, CONVICTIONS, DETAILS, LINKEDIN, PORTRAIT, ROMAN, SECTIONS, WHATSAPP,
+  photosFor, type Photo,
+} from "./content";
 
 const CATS: [string, string][] = [
   ["familia", "Família"],
@@ -12,231 +14,215 @@ const CATS: [string, string][] = [
   ["origens", "Origens"],
 ];
 
+function Next({ id, onJump }: { id: string; onJump: (id: string) => void }) {
+  const n = BLOCKS.findIndex((b) => b.id === id) + 1;
+  if (n >= BLOCKS.length) return null;
+  const nx = BLOCKS[n];
+  return (
+    <button className="m-next" onClick={() => onJump(nx.id)}>
+      <span className="mono small">Próximo</span>
+      <span>{nx.label} ↓</span>
+    </button>
+  );
+}
+
 export default function Mobile({ active }: { active: boolean }) {
-  const [f, setF] = useState(-1);
-  const [lbf, setLbf] = useState("all");
-  const [lb, setLb] = useState(-1);
-
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const labelRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const engRef = useRef<Engine | null>(null);
-  const touch = useRef<{ x: number; yaw: number } | null>(null);
-
-  useEffect(() => {
-    if (!active || !canvasRef.current) return;
-    if (!engRef.current) {
-      engRef.current = makeEngine(canvasRef.current, { particles: 1260, atlasX: 0.5, atlasScale: 0.18, atlasTilt: -0.4, repel: false });
-    }
-    let raf = 0;
-    const tick = () => {
-      const e = engRef.current!;
-      e.frame();
-      for (let k = 0; k < K; k++) {
-        const el = labelRefs.current[k];
-        if (!el) continue;
-        const nd = e.nodes[k];
-        el.style.transform = `translate3d(${nd.x.toFixed(1)}px,${nd.y.toFixed(1)}px,0) translate(-3px,-50%) translateY(46px)`;
-        el.style.opacity = (0.4 + nd.depth * 0.6).toFixed(2);
-        el.style.zIndex = String(Math.round(nd.depth * 100));
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [active]);
+  const [menu, setMenu] = useState(false);
+  const [lb, setLb] = useState<{ list: Photo[]; i: number } | null>(null);
+  const [current, setCurrent] = useState("inicio");
 
   useEffect(() => {
     if (!active) return;
-    document.body.style.overflow = f >= 0 || lb >= 0 ? "hidden" : "";
+    document.body.style.overflow = menu || lb ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
-  }, [active, f, lb]);
+  }, [active, menu, lb]);
 
-  const onTouchStart = (ev: TouchEvent) => {
-    const t = ev.touches[0];
-    if (t && engRef.current) { touch.current = { x: t.clientX, yaw: engRef.current.yaw }; engRef.current.drag = true; }
-  };
-  const onTouchMove = (ev: TouchEvent) => {
-    const t = ev.touches[0];
-    if (t && touch.current && engRef.current) engRef.current.yaw = touch.current.yaw + (t.clientX - touch.current.x) * 0.01;
-  };
-  const onTouchEnd = () => {
-    touch.current = null;
-    if (engRef.current) engRef.current.drag = false;
+  // Marca no menu o bloco que está na tela.
+  useEffect(() => {
+    if (!active) return;
+    const els = BLOCKS.map((b) => document.getElementById(`m-${b.id}`)).filter(Boolean) as HTMLElement[];
+    const io = new IntersectionObserver(
+      (entries) => {
+        const vis = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (vis) setCurrent(vis.target.id.slice(2));
+      },
+      { rootMargin: "-40% 0px -50% 0px" },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [active]);
+
+  const jump = (id: string) => {
+    setMenu(false);
+    requestAnimationFrame(() => document.getElementById(`m-${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
 
-  const ch = f >= 0 ? CHAPTERS[f] : null;
-  const lbl = photosFor(lbf);
-  const lbItem = lb >= 0 ? lbl[lb] : null;
-  const hw = ch ? [...ch.h.split(" ").map((t) => ({ t, it: false })), ...ch.em.split(" ").map((t) => ({ t, it: true }))] : [];
+  const curBlock = BLOCKS.find((b) => b.id === current) ?? BLOCKS[0];
+  const mundo = photosFor("mundo");
 
   return (
     <div className="m-root">
       <header className="m-top">
-        <span className="m-brand">Eder Balbino</span>
-        <div className="m-links">
-          <a href="#fotos">Fotos</a>
-          <a href="#detalhes">Trajetória</a>
-        </div>
+        <button className="m-brand serif" onClick={() => jump("inicio")}>Eder Balbino</button>
+        <span className="mono m-where">{curBlock.label}</span>
+        <button className="m-menu-btn" onClick={() => setMenu(true)} aria-haspopup="dialog" aria-expanded={menu}>
+          Menu
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true"><path d="M2 5h12M2 11h12" /></svg>
+        </button>
       </header>
 
-      <section className="m-hero">
-        <p className="mono ink">Um atlas da transformação</p>
-        <h1 className="serif">Ninguém se transforma <em>de uma vez.</em></h1>
+      <section id="m-inicio" className="m-home">
+        <figure className="m-portrait"><img src={PORTRAIT} alt="Retrato de Eder Balbino em desenho a lápis" /></figure>
+        <p className="mono ink">Fé · Tecnologia · Propósito</p>
+        <h1 className="serif">Eder <em>Balbino</em></h1>
+        <p className="serif m-sub">Ninguém se transforma de uma vez.</p>
+        <p className="m-p">Estatístico, empreendedor, pastor e escritor. Esta é uma história real de transformação, contada em capítulos curtos — para ler em sequência ou escolher pelo menu.</p>
+        <button className="cta dark block" onClick={() => jump("capitulo-1")}>Começar a história ↓</button>
       </section>
 
-      <div className="m-stage" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
-        <canvas ref={canvasRef} aria-hidden="true" />
-        {CHAPTERS.map((c, k) => (
-          <button
-            key={k}
-            ref={(el) => { labelRefs.current[k] = el; }}
-            className="m-node"
-            onClick={() => setF(k)}
-            style={{ opacity: 0 }}
-            aria-label={`Abrir capítulo ${ROMAN[k]}: ${c.label}`}
-          >
-            <span className="dot" /><span className="r">{ROMAN[k]}</span>
-          </button>
-        ))}
-        <span className="mono m-hint">Deslize para girar · toque num numeral</span>
-      </div>
-
-      <section className="m-intro">
-        <p>Sete capítulos de uma história real. Entre por onde quiser — não existe ordem certa.</p>
-        <nav aria-label="Capítulos" className="m-list">
-          {CHAPTERS.map((c, k) => (
-            <button key={k} className="m-card" onClick={() => setF(k)}>
-              <span className="r">{ROMAN[k]}</span>
-              <span className="m-card-t"><span>{c.label}</span><span className="serif">{c.h} {c.em}</span></span>
-              <span aria-hidden="true" className="muted">→</span>
+      {CHAPTERS.map((ch, k) => {
+        const id = k < 6 ? `capitulo-${k + 1}` : "quem-sou";
+        return (
+          <section id={`m-${id}`} className="m-block" key={id}>
+            <div className="m-numeral" aria-hidden="true">{ROMAN[k]}</div>
+            <p className="mono">{k < 6 ? `Capítulo ${ROMAN[k]} · ${ch.label}` : ch.label}</p>
+            <figure className="epi">
+              <blockquote className="serif">{ch.epi}</blockquote>
+              <figcaption className="mono small">— {ch.src}</figcaption>
+            </figure>
+            <h2 className="serif m-title">{ch.h} <em>{ch.em}</em></h2>
+            {ch.img && (
+              <figure className="m-plate-fig">
+                <div className={`m-plate${ch.color ? " color" : ""}`} style={{ aspectRatio: ch.book ? "2 / 3" : ch.wide ? "4 / 3" : "4 / 5" }}>
+                  <img src={ch.img} alt={ch.alt ?? ""} loading="lazy" />
+                  {ch.tag && <span className="tag">{ch.tag}</span>}
+                </div>
+                <figcaption><span className="mono ink">Fig. {ROMAN[k]}</span><span className="mono">{ch.cap}</span></figcaption>
+              </figure>
+            )}
+            {ch.p.map((t, n) => <p className="m-p" key={n}>{t}</p>)}
+            {ch.pull && <blockquote className="serif pull">{ch.pull}</blockquote>}
+            {ch.stats && (
+              <div className="m-stats">{ch.stats.map((s) => <div key={s.v}><span className="serif">{s.v}</span><span className="muted">{s.l}</span></div>)}</div>
+            )}
+            {ch.href && <a className="textlink" href={ch.href} target="_blank" rel="noreferrer">{ch.linkLabel}</a>}
+            {ch.end && <a className="cta dark block" href={WHATSAPP} target="_blank" rel="noreferrer">Conversar comigo ↗</a>}
+            <button className="chip" onClick={() => setLb({ list: photosFor(CHAPTER_FILTER[k]), i: 0 })}>
+              Ver fotos deste tema ({photosFor(CHAPTER_FILTER[k]).length}) →
             </button>
-          ))}
-        </nav>
-        <figure className="epi-row">
-          <blockquote className="serif">“Nada é permanente, exceto a mudança.”</blockquote>
-          <figcaption className="mono small">Heráclito</figcaption>
-        </figure>
+            <Next id={id} onJump={jump} />
+          </section>
+        );
+      })}
+
+      <section id="m-trabalho" className="m-block">
+        <p className="mono">Trajetória · Trabalho</p>
+        <h2 className="serif m-title">Dados, empresas <em>e ensino.</em></h2>
+        <div className="m-group">{DETAILS.trab.map((r) => <div className="drow stack" key={r.a}><span className="muted small-text">{r.a}</span><span>{r.b}</span></div>)}</div>
+        <Next id="trabalho" onJump={jump} />
       </section>
 
-      <section id="fotos" className="m-section">
-        <div className="m-head"><h2 className="serif">Fotografias</h2><span className="mono">{PHOTOS.length} fotos</span></div>
+      <section id="m-formacao" className="m-block">
+        <p className="mono">Trajetória · Formação e prêmios</p>
+        <h2 className="serif m-title">Aprender, <em>sempre.</em></h2>
+        <div className="m-group"><span className="mono">Formação</span>{DETAILS.form.map((t) => <div className="drow" key={t}>{t}</div>)}</div>
+        <div className="m-group"><span className="mono">Reconhecimentos</span>{DETAILS.rec.map((t) => <div className="drow" key={t}>{t}</div>)}</div>
+        <div className="m-group"><span className="mono">Ferramentas</span><div className="tools">{DETAILS.tools.split(", ").map((t) => <span className="tool" key={t}>{t}</span>)}</div></div>
+        <Next id="formacao" onJump={jump} />
+      </section>
+
+      <section id="m-mundo" className="m-block">
+        <p className="mono">Trajetória · Mundo</p>
+        <h2 className="serif m-title">Conhecimento em <em>movimento.</em></h2>
+        <p className="m-p">Palestras, congressos e visitas técnicas em {DETAILS.cities.length} cidades.</p>
+        <div className="m-thumbs bleed">
+          {mundo.map((p, n) => (
+            <button key={p.img} className="m-thumb" onClick={() => setLb({ list: mundo, i: n })} aria-label={`Ampliar: ${p.cap}`}><img src={p.img} alt={p.cap} loading="lazy" /></button>
+          ))}
+        </div>
+        <div className="m-cities">{DETAILS.cities.map((c) => <span key={c}>{c}</span>)}</div>
+        <Next id="mundo" onJump={jump} />
+      </section>
+
+      <section id="m-fe" className="m-block">
+        <p className="mono">Trajetória · Fé e missão</p>
+        <h2 className="serif m-title">Fé, igreja <em>e serviço.</em></h2>
+        {CONVICTIONS.map((c, n) => (
+          <div className="m-conv" key={c.t}><span className="serif">{ROMAN[n]}</span><div><strong>{c.t}</strong><p>{c.d}</p></div></div>
+        ))}
+        <div className="m-group"><span className="mono">Missão VIDE</span><p className="drow">Departamento de missões que apoia cerca de 20 famílias missionárias em Moçambique, Angola, Tunísia, Espanha, França e Brasil.</p></div>
+        <div className="m-group"><span className="mono">Missão NASCE · frentes</span><p className="drow">{DETAILS.nasce}</p></div>
+        <Next id="fe" onJump={jump} />
+      </section>
+
+      <section id="m-fotografias" className="m-block flush">
+        <div className="m-head"><h2 className="serif m-title">Fotografias</h2><span className="mono">{photosFor("all").length} fotos</span></div>
         {CATS.map(([key, label]) => {
           const list = photosFor(key);
           return (
             <div className="m-cat" key={key}>
               <div className="m-cat-h"><span className="serif">{label}</span><span className="mono">{list.length} · deslize →</span></div>
               <div className="m-thumbs">
-                {list.map((p, i) => (
-                  <button key={p.img + i} className="m-thumb" onClick={() => { setLbf(key); setLb(i); }} aria-label={`Ampliar: ${p.cap}`}>
-                    <img src={p.img} alt={p.cap} loading="lazy" />
-                  </button>
+                {list.map((p, n) => (
+                  <button key={p.img + n} className="m-thumb" onClick={() => setLb({ list, i: n })} aria-label={`Ampliar: ${p.cap}`}><img src={p.img} alt={p.cap} loading="lazy" /></button>
                 ))}
               </div>
             </div>
           );
         })}
+        <div className="m-pad"><Next id="fotografias" onJump={jump} /></div>
       </section>
 
-      <section id="detalhes" className="m-section">
-        <h2 className="serif m-pad">Trajetória <em>em detalhe</em></h2>
-        <div className="m-pad m-group">
-          <span className="mono">Trabalho</span>
-          {DETAILS.trab.map((r) => <div className="drow stack" key={r.a}><span className="muted small-text">{r.a}</span><span>{r.b}</span></div>)}
-        </div>
-        <div className="m-pad m-group">
-          <span className="mono">Formação</span>
-          {DETAILS.form.map((t) => <div className="drow" key={t}>{t}</div>)}
-        </div>
-        <div className="m-pad m-group">
-          <span className="mono">Reconhecimentos</span>
-          {DETAILS.rec.map((t) => <div className="drow" key={t}>{t}</div>)}
-        </div>
-        <div className="m-pad m-group">
-          <span className="mono">Fé</span>
-          <p className="drow">{DETAILS.fe}</p>
-        </div>
-        <div className="m-group">
-          <span className="mono m-pad">Mundo · {DETAILS.cities.length} cidades</span>
-          <div className="m-cities m-pad">{DETAILS.cities.map((c) => <span key={c}>{c}</span>)}</div>
-        </div>
-        <div className="m-pad m-group">
-          <span className="mono">Missão NASCE · frentes</span>
-          <p className="drow">{DETAILS.nasce}</p>
-        </div>
-        <div className="m-pad m-group">
-          <span className="mono">Ferramentas</span>
-          <p className="drow small-text">{DETAILS.tools}</p>
-        </div>
-        <div className="m-pad m-group">
-          <a className="cta dark block" href={WHATSAPP} target="_blank" rel="noreferrer">Conversar comigo ↗</a>
-          <span className="muted small-text center">Eder Balbino · Belo Horizonte</span>
-        </div>
+      <section id="m-contato" className="m-block">
+        <p className="mono">Contato</p>
+        <h2 className="serif m-title">Para perguntas, conversas <em>ou troca de informações.</em></h2>
+        <a className="cta dark block" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp ↗</a>
+        <a className="cta line block" href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <button className="m-next" onClick={() => jump("inicio")}><span className="mono small">Voltar</span><span>Início ↑</span></button>
       </section>
 
-      {ch && (
-        <div className="m-sheet" role="dialog" aria-modal="true" aria-label={`${ROMAN[f]} · ${ch.label}`} key={f}>
-          <div className="m-sheet-in">
-            <div className="m-numeral" aria-hidden="true">{ROMAN[f]}</div>
-            <div className="m-sheet-top">
-              <button className="chip" onClick={() => setF(-1)}>
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true"><path d="M10 3L5 8l5 5" /></svg> Atlas
-              </button>
-              <span className="mono">{ROMAN[f]} · {ch.label}</span>
-            </div>
-            <div className="m-sheet-body">
-              <figure className="epi">
-                <blockquote className="serif">{ch.epi}</blockquote>
-                <figcaption className="mono small">— {ch.src}</figcaption>
-              </figure>
-              <h2 className="serif m-title">
-                {hw.map((w, i) => (
-                  <span className="w" key={i}><span className={`wi${w.it ? " it" : ""}`} style={{ animationDelay: `${150 + i * 70}ms` }}>{w.t}</span></span>
-                ))}
-              </h2>
-              {ch.img && (
-                <figure className="m-plate-fig">
-                  <div className={`m-plate${ch.color ? " color" : ""}`} style={{ aspectRatio: ch.book ? "2 / 3" : ch.wide ? "4 / 3" : "4 / 5" }}>
-                    <img src={ch.img} alt={ch.alt ?? ""} />
-                    {ch.tag && <span className="tag">{ch.tag}</span>}
-                  </div>
-                  <figcaption><span className="mono ink">Fig. {ROMAN[f]}</span><span className="mono">{ch.cap}</span></figcaption>
-                </figure>
-              )}
-              <button className="chip" onClick={() => { setLbf(CHAPTER_FILTER[f]); setLb(0); }}>
-                Ver fotos deste tema ({photosFor(CHAPTER_FILTER[f]).length}) →
-              </button>
-              {ch.p.map((t, i) => <p className="m-p" key={i}>{t}</p>)}
-              {ch.pull && <blockquote className="serif pull">{ch.pull}</blockquote>}
-              {ch.stats && (
-                <div className="m-stats">
-                  {ch.stats.map((s) => <div key={s.v}><span className="serif">{s.v}</span><span className="muted">{s.l}</span></div>)}
-                </div>
-              )}
-              {ch.href && <a className="textlink" href={ch.href} target="_blank" rel="noreferrer">{ch.linkLabel}</a>}
-              {ch.end && <a className="cta dark block" href={WHATSAPP} target="_blank" rel="noreferrer">Conversar comigo ↗</a>}
-              <div className="m-others">
-                <span className="mono">Continue por onde quiser</span>
-                <div className="chips">
-                  {CHAPTERS.map((c, k) => k === f ? null : (
-                    <button key={k} className="chip" onClick={() => setF(k)}><span className="r">{ROMAN[k]}</span>{c.label}</button>
-                  ))}
-                </div>
-              </div>
-            </div>
+      {menu && (
+        <div className="m-menu" role="dialog" aria-modal="true" aria-label="Menu">
+          <div className="m-menu-top">
+            <span className="serif m-brand">Eder Balbino</span>
+            <button className="m-menu-btn" onClick={() => setMenu(false)}>Fechar
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8" /></svg>
+            </button>
           </div>
+          <nav className="m-menu-nav">
+            {SECTIONS.map((s) => {
+              const items = BLOCKS.filter((b) => b.section === s.id);
+              return (
+                <div className="m-menu-sec" key={s.id}>
+                  <button className={`m-menu-head${curBlock.section === s.id ? " on" : ""}`} onClick={() => jump(items[0].id)}>{s.label}</button>
+                  {items.length > 1 && (
+                    <ul>
+                      {items.map((b) => (
+                        <li key={b.id}>
+                          <button className={`m-menu-sub${b.id === current ? " on" : ""}`} onClick={() => jump(b.id)}>
+                            {b.kind === "chapter" && <span className="r">{ROMAN[b.ch!]}</span>}{b.label}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+          </nav>
         </div>
       )}
 
-      {lbItem && (
-        <div className="m-lightbox" role="dialog" aria-modal="true" aria-label={lbItem.cap}>
-          <button className="m-lbclose" aria-label="Fechar" onClick={() => setLb(-1)}>
+      {lb && (
+        <div className="m-lightbox" role="dialog" aria-modal="true" aria-label={lb.list[lb.i].cap}>
+          <button className="m-lbclose" aria-label="Fechar" onClick={() => setLb(null)}>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8" /></svg>
           </button>
-          <img key={lbItem.img} src={lbItem.img} alt={lbItem.cap} />
-          <div className="m-lbcap"><span className="serif">{lbItem.cap}</span><span className="pos">{lb + 1} / {lbl.length}</span></div>
+          <img key={lb.list[lb.i].img} src={lb.list[lb.i].img} alt={lb.list[lb.i].cap} />
+          <div className="m-lbcap"><span className="serif">{lb.list[lb.i].cap}</span><span className="pos">{lb.i + 1} / {lb.list.length}</span></div>
           <div className="m-lbnav">
-            <button onClick={() => setLb((lb - 1 + lbl.length) % lbl.length)}>← Anterior</button>
-            <button onClick={() => setLb((lb + 1) % lbl.length)}>Próxima →</button>
+            <button onClick={() => setLb({ ...lb, i: (lb.i - 1 + lb.list.length) % lb.list.length })}>← Anterior</button>
+            <button onClick={() => setLb({ ...lb, i: (lb.i + 1) % lb.list.length })}>Próxima →</button>
           </div>
         </div>
       )}

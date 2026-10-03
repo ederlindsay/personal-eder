@@ -221,3 +221,38 @@ export const FILTERS: [string, string][] = [
 export const CHAPTER_FILTER = ["origens", "trabalho", "trabalho", "fe", "trabalho", "fe", "familia"];
 
 export const photosFor = (f: string) => PHOTOS.filter((p) => f === "all" || p.cats.includes(f));
+
+export const LINKEDIN = "https://www.linkedin.com/in/ederbalbino/";
+export const PORTRAIT = "/fotos/eder-desenho.webp";
+
+/* ---------- Navegação: seções (menu) e blocos (sub-menu) ---------- */
+
+export type BlockKind = "home" | "chapter" | "work" | "study" | "world" | "faith" | "photos" | "contact";
+export type Block = { id: string; section: string; label: string; kind: BlockKind; ch?: number };
+
+export const SECTIONS = [
+  { id: "inicio", label: "Início" },
+  { id: "historia", label: "A história" },
+  { id: "quem-sou", label: "Quem sou eu" },
+  { id: "trajetoria", label: "Trajetória" },
+  { id: "fotografias", label: "Fotografias" },
+  { id: "contato", label: "Contato" },
+];
+
+export const BLOCKS: Block[] = [
+  { id: "inicio", section: "inicio", label: "Início", kind: "home" },
+  ...CHAPTERS.slice(0, 6).map((c, i): Block => ({ id: `capitulo-${i + 1}`, section: "historia", label: c.label, kind: "chapter", ch: i })),
+  { id: "quem-sou", section: "quem-sou", label: "Quem sou eu", kind: "chapter", ch: 6 },
+  { id: "trabalho", section: "trajetoria", label: "Trabalho", kind: "work" },
+  { id: "formacao", section: "trajetoria", label: "Formação e prêmios", kind: "study" },
+  { id: "mundo", section: "trajetoria", label: "Mundo", kind: "world" },
+  { id: "fe", section: "trajetoria", label: "Fé e missão", kind: "faith" },
+  { id: "fotografias", section: "fotografias", label: "Fotografias", kind: "photos" },
+  { id: "contato", section: "contato", label: "Contato", kind: "contact" },
+];
+
+export const CONVICTIONS = [
+  { t: "Centralidade de Cristo", d: "A esperança não está na força pessoal, mas na pessoa e na obra de Jesus Cristo." },
+  { t: "Autoridade das Escrituras", d: "A Palavra de Deus como referência para discernir a fé, o sofrimento e a responsabilidade." },
+  { t: "Soberania de Deus", d: "Descansar na providência divina mesmo quando as circunstâncias permanecem incompreensíveis." },
+];

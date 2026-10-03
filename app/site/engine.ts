@@ -1,4 +1,4 @@
-/* Atlas: sete constelações de partículas em 3D, uma para cada capítulo. */
+/* Escultura de partículas em 3D: cada capítulo tem uma forma (semente, escada, casulo…). */
 
 const TAU = Math.PI * 2;
 
@@ -92,13 +92,10 @@ const WARM = [0, 0, 0, 0.05, 0.7, 0.4, 0.25];
 
 export type EngineOptions = {
   particles: number;
-  /** horizontal center of the atlas, 0–1 */
-  atlasX: number;
-  /** atlas scale relative to min(width, height) */
-  atlasScale: number;
-  atlasTilt: number;
-  /** horizontal center when a chapter is open, per chapter */
-  focusX?: (k: number) => number;
+  /** horizontal center of the sculpture for chapter k, 0–1 */
+  focusX: (k: number) => number;
+  /** sculpture scale relative to min(width, height) */
+  focusScale: number;
   repel: boolean;
 };
 
@@ -126,20 +123,16 @@ export function makeEngine(canvas: HTMLCanvasElement, opts: EngineOptions) {
   const q = [0, 0, 0, 0];
 
   const E = {
-    focus: -1,
-    hover: -1,
+    focus: 0,
     t: 0,
     yaw: 0.3,
     drag: false,
     mx: 0, my: 0, smx: 0, smy: 0,
     px: -9999, py: -9999,
-    cx: opts.atlasX,
-    zoom: 1, zoomT: 1,
+    cx: opts.focusX(0),
     speed: 1,
     W: 0, H: 0, dpr: 1,
     last: 0,
-    scl: new Array(K).fill(1) as number[],
-    nodes: Array.from({ length: K }, () => ({ x: 0, y: 0, depth: 0 })),
     frame() {
       if (!ctx) return;
       const dpr = Math.min(window.devicePixelRatio || 1, 2), cw = canvas.clientWidth, ch = canvas.clientHeight;
@@ -155,23 +148,19 @@ export function makeEngine(canvas: HTMLCanvasElement, opts: EngineOptions) {
       const ease = (r: number) => 1 - Math.pow(1 - r, step);
       const sp = reduce ? 0 : E.speed, f0 = E.focus;
       E.t += 0.016 * sp * step;
-      if (!E.drag) E.yaw += (f0 < 0 ? 0.0022 : 0.0035) * sp * step;
+      if (!E.drag) E.yaw += 0.0035 * sp * step;
       E.smx += (E.mx - E.smx) * ease(0.05);
       E.smy += (E.my - E.smy) * ease(0.05);
-      const cxT = f0 < 0 || !opts.focusX ? opts.atlasX : opts.focusX(f0);
-      E.cx += (cxT - E.cx) * ease(0.05);
-      E.zoom += (E.zoomT - E.zoom) * ease(0.08);
+      E.cx += (opts.focusX(f0) - E.cx) * ease(0.05);
       for (let k = 0; k < K; k++) {
-        const tgt = f0 < 0 && E.hover === k ? 1.5 : 1;
-        E.scl[k] += (tgt - E.scl[k]) * ease(0.08);
-        const wt = (f0 === k ? WARM[k] : k === 4 ? 0.7 : 0) + (E.hover === k && f0 < 0 ? 0.25 : 0);
+        const wt = f0 === k ? WARM[k] : k === 4 ? 0.7 : 0;
         warmNow[k] += (wt - warmNow[k]) * ease(0.05);
       }
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const W = canvas.width, H = canvas.height, cx = W * E.cx, cy = H * 0.5;
-      const base = Math.min(W, H) * (f0 < 0 ? opts.atlasScale : 0.3) * E.zoom;
-      const ry = E.yaw + E.smx * 0.35, rx = (f0 < 0 ? opts.atlasTilt : -0.16) + E.smy * 0.25;
+      const base = Math.min(W, H) * opts.focusScale;
+      const ry = E.yaw + E.smx * 0.35, rx = -0.16 + E.smy * 0.25;
       const cY = Math.cos(ry), sY = Math.sin(ry), cX = Math.cos(rx), sX = Math.sin(rx);
       const proj = (x: number, y: number, z: number) => {
         const x1 = x * cY - z * sY, z1 = x * sY + z * cY, y1 = y * cX - z1 * sX, z2 = y * sX + z1 * cX, f = 3.6 / (3.6 + z2);
@@ -179,30 +168,7 @@ export function makeEngine(canvas: HTMLCanvasElement, opts: EngineOptions) {
       };
 
       ctx.lineWidth = dpr;
-      if (f0 < 0) {
-        ctx.strokeStyle = "rgba(22,22,20,0.09)";
-        ctx.beginPath();
-        for (let s = 0; s <= 96; s++) {
-          const a = (s / 96) * TAU;
-          proj(Math.cos(a) * 1.75, Math.sin(a * 3.5) * 0.28, Math.sin(a) * 1.75);
-          if (s) ctx.lineTo(q[0], q[1]); else ctx.moveTo(q[0], q[1]);
-        }
-        ctx.stroke();
-        ctx.strokeStyle = "rgba(22,22,20,0.05)";
-        ctx.beginPath();
-        for (let s = 0; s <= 96; s++) {
-          const a = (s / 96) * TAU;
-          proj(Math.cos(a) * 2.6, 0, Math.sin(a) * 2.6);
-          if (s) ctx.lineTo(q[0], q[1]); else ctx.moveTo(q[0], q[1]);
-        }
-        ctx.stroke();
-        for (let k = 0; k < K; k++) {
-          const C = CENTERS[k];
-          proj(C[0], C[1], C[2]);
-          E.nodes[k].x = q[0] / dpr; E.nodes[k].y = q[1] / dpr;
-          E.nodes[k].depth = Math.min(1, Math.max(0, (2 - q[2]) / 4));
-        }
-      } else {
+      {
         ctx.strokeStyle = "rgba(22,22,20,0.07)";
         for (let o = 0; o < 2; o++) {
           const R = base * (1.7 + o * 0.3), sq = Math.abs(Math.sin(rx + 0.42)) * 0.9 + 0.08;
@@ -223,8 +189,7 @@ export function makeEngine(canvas: HTMLCanvasElement, opts: EngineOptions) {
         if (k2 === 4 && p.a >= 0.06) { const ax = Math.abs(lx); lx = lx * cF; lz = lz + ax * sF; }
         const C2 = CENTERS[k2];
         let tx: number, ty: number, tz: number;
-        if (f0 < 0) { const m = 0.34 * E.scl[k2]; tx = C2[0] + lx * m; ty = C2[1] + ly * m; tz = C2[2] + lz * m; }
-        else if (f0 === k2) { tx = lx; ty = ly; tz = lz; }
+        if (f0 === k2) { tx = lx; ty = ly; tz = lz; }
         else { tx = C2[0] * 2.7 + lx * 0.12; ty = C2[1] * 2 + ly * 0.12; tz = C2[2] * 2.7 + lz * 0.12; }
         const jit = 0.0016 * sp;
         p.x += (tx - p.x) * kp + Math.sin(E.t * 0.9 + p.s * 40) * jit;
@@ -239,7 +204,7 @@ export function makeEngine(canvas: HTMLCanvasElement, opts: EngineOptions) {
         }
         const depth = Math.min(1, Math.max(0, (2 - q[2]) / 4));
         let al = 0.1 + depth * 0.72;
-        if (f0 >= 0 && f0 !== k2) al *= 0.35;
+        if (f0 !== k2) al *= 0.35;
         const size = (0.55 + p.s * 1.2) * q[3] * dpr * (f0 === k2 ? 1.15 : 1);
         ctx.fillStyle = p.e < warmNow[k2] ? `rgba(217,98,43,${(al * 0.95).toFixed(3)})` : `rgba(22,22,20,${al.toFixed(3)})`;
         ctx.fillRect(sx + p.ox - size / 2, sy + p.oy - size / 2, size, size);
