@@ -23,43 +23,26 @@ function render(path = "/") {
   );
 }
 
-const unfinishedCopy =
-  /Temas em desenvolvimento|Contextos a documentar|Informações a acrescentar|Possibilidade em estudo|Esta área poderá/i;
-
-test("home presents the final four-part narrative", async () => {
+test("home presents the atlas with all seven chapters", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  for (const label of ["Carreira", "Mundo", "Espiritual", "Social"]) {
-    assert.match(html, new RegExp(`>${label}<`));
+  assert.match(html, /Um atlas da transformação/);
+  for (const label of ["O começo", "A construção", "O casulo", "A rendição", "A transformação", "O que se multiplica", "Quem sou eu"]) {
+    assert.match(html, new RegExp(`>${label}<`), label);
   }
-  assert.doesNotMatch(html, />História</);
-  assert.doesNotMatch(html, />Vida espiritual</);
-  assert.doesNotMatch(html, />Impacto social</);
-  assert.doesNotMatch(html, unfinishedCopy);
+  assert.match(html, /Fotografias/);
+  assert.match(html, /Trajetória/);
   assert.match(html, /og-production\.png/);
+  assert.doesNotMatch(html, /Curtir/);
 });
 
-test("all active sections render without unfinished editorial copy", async () => {
-  for (const path of [
-    "/carreira",
-    "/experiencia-internacional",
-    "/vida-espiritual",
-    "/impacto-social",
-    "/o-caos",
-  ]) {
+test("retired section URLs return visitors to the home page", async () => {
+  for (const path of ["/historia", "/carreira", "/experiencia-internacional", "/vida-espiritual", "/impacto-social", "/o-caos"]) {
     const response = await render(path);
-    assert.equal(response.status, 200, path);
-    const html = await response.text();
-    assert.doesNotMatch(html, unfinishedCopy, path);
-    assert.doesNotMatch(html, /href="#(?:aprofundar|galeria)"/i, path);
+    assert.ok([301, 302, 307, 308].includes(response.status), path);
+    assert.equal(new URL(response.headers.get("location")).pathname, "/", path);
   }
-});
-
-test("the retired history URL returns visitors to the home page", async () => {
-  const response = await render("/historia");
-  assert.ok([301, 302, 307, 308].includes(response.status));
-  assert.equal(new URL(response.headers.get("location")).pathname, "/");
 });
