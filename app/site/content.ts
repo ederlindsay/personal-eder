@@ -91,7 +91,7 @@ export const CHAPTERS: Chapter[] = [
     src: "Romanos 12.2",
     h: "Pessoas mudam. Empresas",
     em: "também.",
-    img: F("organizacoes-cognitivas-capa"),
+    img: F("organizacoes-cognitivas-capa-hd"),
     book: true,
     color: true,
     tag: "Novo livro · em breve",
