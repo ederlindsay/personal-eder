@@ -95,9 +95,9 @@ export default function Mobile({ active }: { active: boolean }) {
               <figure className="m-plate-fig">
                 <div className={`m-plate${ch.color ? " color" : ""}`} style={{ aspectRatio: ch.book ? "2 / 3" : ch.wide ? "4 / 3" : "4 / 5" }}>
                   <img src={ch.img} alt={ch.alt ?? ""} loading="lazy" />
-                  {ch.tag && <span className="tag">{ch.tag}</span>}
-                </div>
+                                  </div>
                 <figcaption><span className="mono ink">Fig. {ROMAN[k]}</span><span className="mono">{ch.cap}</span></figcaption>
+                {ch.tag && <span className="tag">{ch.tag}</span>}
               </figure>
             )}
             {ch.p.map((t, n) => <p className="m-p" key={n}>{t}</p>)}

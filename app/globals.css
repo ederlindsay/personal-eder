@@ -57,7 +57,7 @@ img { max-width: 100%; }
 .photolink { all: unset; box-sizing: border-box; cursor: pointer; min-height: 36px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; border-bottom: 1px solid var(--ink); align-self: flex-start; }
 .photolink:hover { color: var(--accent); border-color: var(--accent); }
 .textlink { align-self: flex-start; font-size: 15px; padding: 8px 0; border-bottom: 1px solid var(--ink); }
-.tag { position: absolute; top: 14px; left: 14px; height: 28px; padding: 0 12px; display: inline-flex; align-items: center; background: var(--accent); color: var(--ink); border-radius: 999px; font-size: 12px; font-weight: 500; }
+.tag { align-self: flex-start; height: 26px; padding: 0 11px; display: inline-flex; align-items: center; background: var(--accent); color: var(--ink); border-radius: 999px; font-size: 12px; font-weight: 500; }
 .pull { margin: 0; padding-left: 18px; border-left: 1px solid var(--accent); font-size: 22px; line-height: 1.3; font-style: italic; }
 .epi { margin: 0; display: flex; flex-direction: column; gap: 6px; max-width: 440px; }
 .epi blockquote { margin: 0; font-size: 19px; line-height: 1.3; font-style: italic; color: #3A3935; }

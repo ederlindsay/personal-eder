@@ -259,9 +259,9 @@ export default function Desktop({ active }: { active: boolean }) {
                       <div className={`plate${ch.color ? " color" : ""}`} style={{ aspectRatio: ch.book ? "2 / 3" : ch.wide ? "4 / 3" : "4 / 5" }}>
                         <img src={ch.img} alt={ch.alt ?? ""} />
                         <span className="glare" />
-                        {ch.tag && <span className="tag">{ch.tag}</span>}
-                      </div>
+                                              </div>
                       <figcaption><span className="mono ink">Fig. {ROMAN[chIdx]}</span><span className="mono">{ch.cap}</span></figcaption>
+                      {ch.tag && <span className="tag">{ch.tag}</span>}
                     </figure>
                   </div>
                 </div>
