@@ -57,7 +57,7 @@ function sprout(p: Seeds): Vec {
 /* II · escada: degraus subindo, com espelhos, pisos e profundidade */
 function stairs(p: Seeds): Vec {
   const { a, b, c, d } = p;
-  const N = 8, w = 0.26, h = 0.24, x0 = -1.04, yBase = 0.92, D = 0.46;
+  const N = 8, w = 0.23, h = 0.23, x0 = -0.92, yBase = 0.92, D = 0.42;
   const k = Math.floor(b * N);
   const left = x0 + k * w, right = left + w;
   const top = yBase - (k + 1) * h, bottom = top + h;

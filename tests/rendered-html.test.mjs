@@ -23,7 +23,7 @@ function render(path = "/") {
   );
 }
 
-test("home presents the portrait, menu and all seven chapters", async () => {
+test("home presents the portrait and the menu by theme", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -32,9 +32,12 @@ test("home presents the portrait, menu and all seven chapters", async () => {
   assert.match(html, /Ninguém se transforma de uma vez/);
   assert.match(html, /eder-desenho\.webp/);
   assert.doesNotMatch(html, /[Aa]tlas/);
-  for (const label of ["O começo", "A construção", "O casulo", "A rendição", "A transformação", "O que se multiplica", "Quem sou eu"]) {
+  for (const label of ["Escritor", "Empreendedor", "Palestrante", "Fé e missão", "Família", "Desafios", "Origens"]) {
     assert.match(html, new RegExp(`>${label}<`), label);
   }
+  assert.match(html, /Organizações Cognitivas/);
+  assert.match(html, /images\/brand\/mono\//);
+  assert.doesNotMatch(html, /em breve/i);
   assert.match(html, /Fotografias/);
   assert.match(html, /Trajetória/);
   assert.match(html, /og-production\.png/);

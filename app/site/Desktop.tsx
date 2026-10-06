@@ -2,10 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState, type MouseEvent, type WheelEvent } from "react";
 import {
-  BLOCKS, CHAPTERS, CHAPTER_FILTER, CONVICTIONS, DETAILS, FILTERS, LINKEDIN, PORTRAIT, ROMAN, SECTIONS, WHATSAPP,
+  BLOCKS, DETAILS, FILTERS, LINKEDIN, PORTRAIT, SECTIONS, WHATSAPP,
   photosFor, type Photo,
 } from "./content";
 import { makeEngine, type Engine } from "./engine";
+import { Logos } from "./Logos";
 
 const Arrow = ({ dir = "right", size = 16 }: { dir?: "left" | "right" | "down"; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
@@ -39,8 +40,8 @@ export default function Desktop({ active }: { active: boolean }) {
   const wheel = useRef({ acc: 0, lock: 0 });
 
   const block = BLOCKS[i];
-  const ch = block.kind === "chapter" ? CHAPTERS[block.ch!] : null;
-  const chIdx = block.ch ?? -1;
+  const ch = block.topic ?? null;
+  const hasArt = !!ch && ch.shape >= 0;
 
   useEffect(() => { live.current.i = i; }, [i]);
 
@@ -53,7 +54,7 @@ export default function Desktop({ active }: { active: boolean }) {
     });
   }, []);
 
-  // Deep links: #capitulo-3 etc.
+  // Deep links: #familia, #mundo etc.
   useEffect(() => {
     if (!active) return;
     const onHash = () => go(indexFromHash());
@@ -112,7 +113,7 @@ export default function Desktop({ active }: { active: boolean }) {
     if (!engRef.current) {
       engRef.current = makeEngine(canvasRef.current, {
         particles: 3200,
-        focusX: (k) => (CHAPTERS[k].img ? 0.7 : 0.72),
+        focusX: () => 0.75,
         focusScale: 0.24,
         repel: true,
       });
@@ -121,7 +122,7 @@ export default function Desktop({ active }: { active: boolean }) {
     const tick = () => {
       const e = engRef.current!;
       const b = BLOCKS[live.current.i];
-      e.focus = b.kind === "chapter" ? b.ch! : 6;
+      if (b.topic && b.topic.shape >= 0) e.focus = b.topic.shape;
       e.frame();
       raf = requestAnimationFrame(tick);
     };
@@ -183,7 +184,6 @@ export default function Desktop({ active }: { active: boolean }) {
                     {items.map(({ b, n }) => (
                       <li key={b.id}>
                         <button className={`sub${n === i ? " on" : ""}`} onClick={() => go(n)} aria-current={n === i ? "page" : undefined}>
-                          {b.kind === "chapter" && <span className="r">{ROMAN[b.ch!]}</span>}
                           {b.label}
                         </button>
                       </li>
@@ -201,21 +201,20 @@ export default function Desktop({ active }: { active: boolean }) {
       </aside>
 
       <div className="main" ref={mainRef} onWheel={onWheel} onMouseMove={onMove} onMouseLeave={onLeave}>
-        <canvas ref={canvasRef} aria-hidden="true" className={`art${ch ? " on" : ""}`} />
-        {ch && <div className="numeral" key={`n${i}`} aria-hidden="true">{ROMAN[chIdx]}</div>}
+        <canvas ref={canvasRef} aria-hidden="true" className={`art${hasArt ? " on" : ""}`} />
 
         <section className={`block ${anim} k-${block.kind}`} key={i} aria-label={block.label}>
           {block.kind === "home" && (
             <div className="home">
               <div className="home-txt">
-                <p className="mono ink fd" style={{ animationDelay: "80ms" }}>Fé · Tecnologia · Propósito</p>
+                <p className="mono ink fd" style={{ animationDelay: "80ms" }}>Escritor · Palestrante · Empreendedor · Pastor</p>
                 <h1 className="serif home-name">{words("Eder", "Balbino")}</h1>
                 <p className="serif home-sub fd" style={{ animationDelay: "420ms" }}>Ninguém se transforma de uma vez.</p>
                 <p className="body fd" style={{ animationDelay: "560ms" }}>
-                  Estatístico, empreendedor, pastor e escritor. Esta é uma história real de transformação, contada em capítulos curtos — para ler em sequência ou escolher pelo menu.
+                  Fundador e CEO da Gaio, autor de Organizações Cognitivas e Desista do Controle, pastor e mentor. Marido da Heloísa e pai de quatro. Escolha pelo menu o que quer conhecer.
                 </p>
                 <div className="ctas fd" style={{ animationDelay: "700ms" }}>
-                  <button className="cta dark" onClick={() => go(1)}>Começar a história <Arrow /></button>
+                  <button className="cta dark" onClick={() => go(1)}>Conheça o novo livro <Arrow /></button>
                   <button className="cta line" onClick={() => openGallery("all")}>Fotografias</button>
                 </div>
               </div>
@@ -228,29 +227,33 @@ export default function Desktop({ active }: { active: boolean }) {
           {ch && (
             <>
               <div className="txt" style={{ maxWidth: 540 }}>
-                <p className="mono fd">{block.section === "historia" ? `Capítulo ${ROMAN[chIdx]} · ${ch.label}` : ch.label}</p>
-                <figure className="epi fd" style={{ animationDelay: "100ms" }}>
-                  <blockquote className="serif">{ch.epi}</blockquote>
-                  <figcaption className="mono small">— {ch.src}</figcaption>
-                </figure>
+                <p className="mono fd">{ch.kicker}</p>
+                {ch.epi && (
+                  <figure className="epi fd" style={{ animationDelay: "100ms" }}>
+                    <blockquote className="serif">{ch.epi}</blockquote>
+                    <figcaption className="mono small">— {ch.src}</figcaption>
+                  </figure>
+                )}
                 <h2 className="serif title">{words(ch.h, ch.em)}</h2>
                 <div className="paras fd" style={{ animationDelay: "520ms" }}>{ch.p.map((t, n) => <p key={n}>{t}</p>)}</div>
                 {ch.pull && <blockquote className="serif pull fd" style={{ animationDelay: "680ms" }}>{ch.pull}</blockquote>}
+                {ch.list && (
+                  <div className="convs fd" style={{ animationDelay: "680ms" }}>
+                    {ch.list.map((c) => <div key={c.t}><span className="col-t">{c.t}</span><span>{c.d}</span></div>)}
+                  </div>
+                )}
                 {ch.stats && (
                   <div className="stats fd" style={{ animationDelay: "680ms" }}>
-                    {ch.stats.map((s) => <div key={s.v}><span className="serif">{s.v}</span><span>{s.l}</span></div>)}
+                    {ch.stats.map((x) => <div key={x.v}><span className="serif">{x.v}</span><span>{x.l}</span></div>)}
                   </div>
                 )}
-                {ch.href && <a className="textlink fd" href={ch.href} target="_blank" rel="noreferrer" style={{ animationDelay: "760ms" }}>{ch.linkLabel}</a>}
-                {ch.end && (
-                  <div className="ctas fd" style={{ animationDelay: "760ms" }}>
-                    <a className="cta dark" href={WHATSAPP} target="_blank" rel="noreferrer">Conversar comigo ↗</a>
-                    <button className="cta line" onClick={() => go(BLOCKS.findIndex((b) => b.id === "trabalho"))}>Ver a trajetória</button>
-                  </div>
-                )}
-                <button className="photolink fd" onClick={() => openGallery(CHAPTER_FILTER[chIdx])} style={{ animationDelay: "840ms" }}>
-                  Ver fotos deste tema ({photosFor(CHAPTER_FILTER[chIdx]).length}) →
-                </button>
+                {ch.note && <p className="small-text fd" style={{ animationDelay: "720ms", margin: 0, maxWidth: 540 }}>{ch.note}</p>}
+                {ch.logos && <div className="fd topic-logos" style={{ animationDelay: "720ms" }}><Logos items={ch.logos} /></div>}
+                <div className="ctas-row fd" style={{ animationDelay: "800ms" }}>
+                  {ch.href && <a className="textlink" href={ch.href} target="_blank" rel="noreferrer">{ch.linkLabel}</a>}
+                  {ch.more && <button className="photolink" onClick={() => go(BLOCKS.findIndex((x) => x.id === ch.more!.to))}>{ch.more.label} →</button>}
+                  <button className="photolink" onClick={() => openGallery(ch.filter)}>Ver fotos ({photosFor(ch.filter).length}) →</button>
+                </div>
               </div>
               {ch.img && (
                 <div className="platepos" style={{ width: ch.book ? 180 : ch.wide ? 270 : 200 }}>
@@ -260,7 +263,7 @@ export default function Desktop({ active }: { active: boolean }) {
                         <img src={ch.img} alt={ch.alt ?? ""} />
                         <span className="glare" />
                                               </div>
-                      <figcaption><span className="mono ink">Fig. {ROMAN[chIdx]}</span><span className="mono">{ch.cap}</span></figcaption>
+                      <figcaption><span className="mono ink">Fig.</span><span className="mono">{ch.cap}</span></figcaption>
                       {ch.tag && <span className="tag">{ch.tag}</span>}
                     </figure>
                   </div>
@@ -271,21 +274,21 @@ export default function Desktop({ active }: { active: boolean }) {
 
           {block.kind === "work" && (
             <div className="wide">
-              <p className="mono fd">Trajetória · Trabalho</p>
+              <p className="mono fd">Empreendedor · Trajetória completa</p>
               <h2 className="serif title">{words("Dados, empresas", "e ensino.")}</h2>
               <div className="rows fd" style={{ animationDelay: "420ms" }}>
-                {DETAILS.trab.map((r) => <div className="row" key={r.a}><span className="mono">{r.a}</span><span>{r.b}</span></div>)}
+                {DETAILS.trab.map((r) => <div className="row" key={r.a}><span className="mono">{r.a}</span><span>{r.b}</span><Logos items={r.logos} /></div>)}
               </div>
             </div>
           )}
 
           {block.kind === "study" && (
             <div className="wide">
-              <p className="mono fd">Trajetória · Formação e prêmios</p>
+              <p className="mono fd">Empreendedor · Formação e prêmios</p>
               <h2 className="serif title">{words("Aprender,", "sempre.")}</h2>
               <div className="cols3 fd" style={{ animationDelay: "420ms" }}>
-                <div className="col"><span className="mono">Formação</span>{DETAILS.form.map((t) => <div className="drow" key={t}>{t}</div>)}</div>
-                <div className="col"><span className="mono">Reconhecimentos</span>{DETAILS.rec.map((t) => <div className="drow" key={t}>{t}</div>)}</div>
+                <div className="col"><span className="mono">Formação</span>{DETAILS.form.map((x) => <div className="drow with-logo" key={x.t}><span>{x.t}</span><Logos items={x.logos} /></div>)}</div>
+                <div className="col"><span className="mono">Reconhecimentos</span>{DETAILS.rec.map((x) => <div className="drow with-logo" key={x.t}><span>{x.t}</span><Logos items={x.logos} /></div>)}</div>
                 <div className="col"><span className="mono">Ferramentas</span><div className="tools">{DETAILS.tools.split(", ").map((t) => <span className="tool" key={t}>{t}</span>)}</div></div>
               </div>
             </div>
@@ -294,7 +297,7 @@ export default function Desktop({ active }: { active: boolean }) {
           {block.kind === "world" && (
             <div className="wide world">
               <div className="world-txt">
-                <p className="mono fd">Trajetória · Mundo</p>
+                <p className="mono fd">Palestrante · Por onde já passei</p>
                 <h2 className="serif title">{words("Conhecimento em", "movimento.")}</h2>
                 <p className="body fd" style={{ animationDelay: "420ms" }}>Palestras, congressos e visitas técnicas a empresas, universidades, igrejas e projetos em {DETAILS.cities.length} cidades.</p>
                 <div className="cities fd" style={{ animationDelay: "520ms" }}>{DETAILS.cities.map((c) => <span key={c}>{c}</span>)}</div>
@@ -305,22 +308,6 @@ export default function Desktop({ active }: { active: boolean }) {
                     <img src={p.img} alt={p.cap} loading="lazy" /><span className="gc">{p.cap}</span>
                   </button>
                 ))}
-              </div>
-            </div>
-          )}
-
-          {block.kind === "faith" && (
-            <div className="wide">
-              <p className="mono fd">Trajetória · Fé e missão</p>
-              <h2 className="serif title">{words("Fé, igreja", "e serviço.")}</h2>
-              <div className="cols3 fd" style={{ animationDelay: "420ms" }}>
-                {CONVICTIONS.map((c, n) => (
-                  <div className="col" key={c.t}><span className="serif roman">{ROMAN[n]}</span><span className="col-t">{c.t}</span><p>{c.d}</p></div>
-                ))}
-              </div>
-              <div className="cols2 fd" style={{ animationDelay: "560ms" }}>
-                <div className="col"><span className="mono">Missão VIDE</span><p>Departamento de missões que apoia cerca de 20 famílias missionárias em Moçambique, Angola, Tunísia, Espanha, França e Brasil.</p></div>
-                <div className="col"><span className="mono">Missão NASCE · frentes</span><p>{DETAILS.nasce}</p></div>
               </div>
             </div>
           )}
